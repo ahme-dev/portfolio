@@ -1,18 +1,19 @@
 export function Footer() {
 	return (
-		<footer className="flex gap-4 flex-col md:flex-row md:justify-between py-4 md:py-8 bg-teal-100 text-neutral-900">
-			<div className="flex gap-2 items-center justify-center md:justify-start">
-				<button className="border-2 border-neutral-900 rounded-3xl py-2 px-4 font-bold hover:bg-neutral-900 hover:text-neutral-100 transition-all">
-					SOURCE
-				</button>
-			</div>
-			<div className="flex gap-2 items-center justify-center md:justify-end">
-				<a
-					href="#Home"
-					className="border-2 border-neutral-900 rounded-3xl py-2 px-4 font-bold hover:bg-neutral-900 hover:text-neutral-100 transition-all"
-				>
-					TOP
-				</a>
+		<footer className="py-4 md:py-8 flex justify-center">
+			<div className="flex gap-1 w-fit justify-center items-center bg-teal-100 text-neutral-900 font-bold rounded-3xl p-1">
+				{["Source", "Top"].map((el) => (
+					<a
+						href={
+							el === "Top"
+								? "#Home"
+								: "https://github.com/ahmeddots/ahmed.systems"
+						}
+						className="hover:bg-neutral-900 hover:text-teal-100 px-4 py-2 rounded-3xl transition-all"
+					>
+						{el.toUpperCase()}
+					</a>
+				))}
 			</div>
 		</footer>
 	);

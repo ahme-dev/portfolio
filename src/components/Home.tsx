@@ -1,6 +1,9 @@
 export function Home() {
 	return (
-		<div id="Home" className="flex flex-col justify-between min-h-screen py-4 md:py-8">
+		<div
+			id="Home"
+			className="flex flex-col justify-between min-h-screen py-4 md:py-8"
+		>
 			{/* Top */}
 			<header className="flex justify-between gap-4">
 				{/* Logo */}
@@ -29,7 +32,7 @@ export function Home() {
 						href={`#${el}`}
 						className="hover:bg-neutral-900 hover:text-teal-100 px-4 py-2 rounded-3xl transition-all"
 					>
-						{el}
+						{el.toUpperCase()}
 					</a>
 				))}
 			</nav>
