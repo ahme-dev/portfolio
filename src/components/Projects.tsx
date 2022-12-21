@@ -14,7 +14,7 @@ export function Projects() {
 
 function Project() {
 	return (
-		<div className="flex flex-col group gap-8 p-8 min-w-[30rem] hover:bg-teal-100 hover:text-neutral-900 rounded-3xl">
+		<div className="flex flex-col group gap-8 p-8 min-w-fit md:min-w-[30rem] hover:bg-teal-100 hover:text-neutral-900 rounded-3xl">
 			{/* Top section */}
 			<div className="flex gap-4 justify-between">
 				{/* Tech used */}

@@ -1,6 +1,6 @@
 export function Contact() {
 	return (
-		<div className="grid grid-cols-2 gap-4">
+		<div className="flex flex-col md:grid md:grid-cols-2 gap-4">
 			{/* Left */}
 			<div className="flex flex-col gap-4 p-8 bg-teal-100 rounded-3xl">
 				<input placeholder="Name" className="bg-transparent" type="text" />
