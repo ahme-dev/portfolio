@@ -10,20 +10,20 @@ export function Projects() {
 function Project() {
 	return (
 		<div className="flex flex-col gap-4 p-8">
-			{/* top section */}
+			{/* Top section */}
 			<div className="flex gap-4 justify-between">
-				{/* tech used */}
+				{/* Tech used */}
 				<div className="flex gap-2">
 					<p>T</p>
 					<p>R</p>
 				</div>
-				{/* buttons */}
+				{/* Buttons */}
 				<div>
 					<a href="">Github</a>
 				</div>
 			</div>
 
-			{/* bottom section */}
+			{/* Bottom section */}
 			<div className="flex flex-col gap-4">
 				<h1>Project 1</h1>
 				<p>
