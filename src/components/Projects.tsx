@@ -2,7 +2,10 @@ import { SiReact, SiTypescript } from "react-icons/si";
 
 export function Projects() {
 	return (
-		<div className="flex gap-4">
+		<div className="flex gap-4 overflow-x-scroll py-4">
+			<Project></Project>
+			<Project></Project>
+			<Project></Project>
 			<Project></Project>
 			<Project></Project>
 		</div>
@@ -11,7 +14,7 @@ export function Projects() {
 
 function Project() {
 	return (
-		<div className="flex flex-col group gap-8 p-8 hover:bg-teal-100 hover:text-neutral-900 rounded-3xl">
+		<div className="flex flex-col group gap-8 p-8 min-w-[30rem] hover:bg-teal-100 hover:text-neutral-900 rounded-3xl">
 			{/* Top section */}
 			<div className="flex gap-4 justify-between">
 				{/* Tech used */}
