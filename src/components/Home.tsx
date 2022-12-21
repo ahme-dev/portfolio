@@ -1,3 +1,5 @@
+import { SiTelegram, SiProtonmail, SiGithub } from "react-icons/si";
+
 export function Home() {
 	return (
 		<div
@@ -5,16 +7,25 @@ export function Home() {
 			className="flex flex-col justify-between min-h-screen py-4 md:py-8"
 		>
 			{/* Top */}
-			<header className="flex justify-between gap-4">
+			<header className="flex justify-between gap-4 text-neutral-900">
 				{/* Logo */}
 				<div className="bg-teal-100 rounded-3xl px-5 py-3">
-					<h1 className="text-neutral-900 font-bold">logo</h1>
+					<h1 className="font-bold">LOGO</h1>
 				</div>
 				{/* Icons */}
-				<div className="flex gap-2 bg-teal-100 rounded-3xl px-5 py-3">
-					<p className="text-neutral-900 font-bold">1</p>
-					<p className="text-neutral-900 font-bold">2</p>
-					<p className="text-neutral-900 font-bold">3</p>
+				<div className="flex gap-2 bg-teal-100 rounded-3xl h-10 p-1">
+					<SiProtonmail
+						href="#"
+						className="w-full h-full hover:bg-neutral-900 hover:text-teal-100 rounded-full p-1 cursor-pointer transition-all"
+					></SiProtonmail>
+					<SiGithub
+						href="#"
+						className="w-full h-full hover:bg-neutral-900 hover:text-teal-100 rounded-full p-1 cursor-pointer transition-all"
+					></SiGithub>
+					<SiTelegram
+						href="#"
+						className="w-full h-full hover:bg-neutral-900 hover:text-teal-100 rounded-full p-1 cursor-pointer transition-all"
+					></SiTelegram>
 				</div>
 			</header>
 
