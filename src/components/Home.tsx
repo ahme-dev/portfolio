@@ -1,6 +1,6 @@
 export function Home() {
 	return (
-		<div className="flex flex-col justify-between min-h-screen py-8">
+		<div id="Home" className="flex flex-col justify-between min-h-screen py-4 md:py-8">
 			{/* Top */}
 			<header className="flex justify-between gap-4">
 				{/* Logo */}
