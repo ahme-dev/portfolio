@@ -1,6 +1,6 @@
 export function Home() {
 	return (
-		<div className="flex flex-col gap-4 py-8 px-12">
+		<div className="flex flex-col gap-4 ">
 			<header className="flex justify-between gap-4">
 				<div>
 					<h1>logo</h1>
