@@ -4,31 +4,31 @@ export function Skills() {
 	return (
 		<div id="Skills" className="flex items-center min-h-screen">
 			<div className="flex flex-wrap justify-center gap-4">
-				<Skill></Skill>
-				<Skill></Skill>
-				<Skill></Skill>
-				<Skill></Skill>
-				<Skill></Skill>
-				<Skill></Skill>
-				<Skill></Skill>
-				<Skill></Skill>
-				<Skill></Skill>
-				<Skill></Skill>
-				<Skill></Skill>
-				<Skill></Skill>
-				<Skill></Skill>
-				<Skill></Skill>
-				<Skill></Skill>
+				<Skill name="React">
+					<SiReact className="w-full h-full"></SiReact>
+				</Skill>
+				<Skill name="React">
+					<SiReact className="w-full h-full"></SiReact>
+				</Skill>
+				<Skill name="React">
+					<SiReact className="w-full h-full"></SiReact>
+				</Skill>
+				<Skill name="React">
+					<SiReact className="w-full h-full"></SiReact>
+				</Skill>
+				<Skill name="React">
+					<SiReact className="w-full h-full"></SiReact>
+				</Skill>
 			</div>
 		</div>
 	);
 }
 
-function Skill() {
+function Skill(props: { name: string; children: any }) {
 	return (
 		<div className="flex items-center justify-center flex-col group w-32 h-32 gap-4 p-4 hover:bg-teal-100 hover:text-neutral-900 rounded-3xl transition-all cursor-pointer">
-			<SiReact className="w-full h-full"></SiReact>
-			<h1 className="font-bold text-lg">React</h1>
+			{props.children}
+			<h1 className="font-bold text-lg">{props.name}</h1>
 		</div>
 	);
 }
