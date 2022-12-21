@@ -2,24 +2,22 @@ import { SiReact } from "react-icons/si";
 
 export function Skills() {
 	return (
-		<div id="Skills" className="flex items-center min-h-screen">
-			<div className="flex flex-wrap justify-center gap-4">
-				<Skill name="React">
-					<SiReact className="w-full h-full"></SiReact>
-				</Skill>
-				<Skill name="React">
-					<SiReact className="w-full h-full"></SiReact>
-				</Skill>
-				<Skill name="React">
-					<SiReact className="w-full h-full"></SiReact>
-				</Skill>
-				<Skill name="React">
-					<SiReact className="w-full h-full"></SiReact>
-				</Skill>
-				<Skill name="React">
-					<SiReact className="w-full h-full"></SiReact>
-				</Skill>
-			</div>
+		<div id="Skills" className="flex flex-wrap justify-center gap-4 py-8">
+			<Skill name="React">
+				<SiReact className="w-full h-full"></SiReact>
+			</Skill>
+			<Skill name="React">
+				<SiReact className="w-full h-full"></SiReact>
+			</Skill>
+			<Skill name="React">
+				<SiReact className="w-full h-full"></SiReact>
+			</Skill>
+			<Skill name="React">
+				<SiReact className="w-full h-full"></SiReact>
+			</Skill>
+			<Skill name="React">
+				<SiReact className="w-full h-full"></SiReact>
+			</Skill>
 		</div>
 	);
 }

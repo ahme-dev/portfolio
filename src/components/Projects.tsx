@@ -2,21 +2,22 @@ import { SiReact, SiTypescript } from "react-icons/si";
 
 export function Projects() {
 	return (
-		<div id="Projects" className="flex items-center min-h-screen">
-			<div className="flex flex-col gap-4 md:flex-row md:overflow-x-scroll md:py-4">
-				<Project name="Project 1" about="lorem18" link="#">
-					<SiReact className="w-full h-full"></SiReact>
-					<SiTypescript className="w-full h-full"></SiTypescript>
-				</Project>
-				<Project name="Project 1" about="lorem18" link="#">
-					<SiReact className="w-full h-full"></SiReact>
-					<SiTypescript className="w-full h-full"></SiTypescript>
-				</Project>
-				<Project name="Project 1" about="lorem18" link="#">
-					<SiReact className="w-full h-full"></SiReact>
-					<SiTypescript className="w-full h-full"></SiTypescript>
-				</Project>
-			</div>
+		<div
+			id="Projects"
+			className="flex flex-col gap-4 md:flex-row md:overflow-x-scroll py-8"
+		>
+			<Project name="Project 1" about="lorem18" link="#">
+				<SiReact className="w-full h-full"></SiReact>
+				<SiTypescript className="w-full h-full"></SiTypescript>
+			</Project>
+			<Project name="Project 1" about="lorem18" link="#">
+				<SiReact className="w-full h-full"></SiReact>
+				<SiTypescript className="w-full h-full"></SiTypescript>
+			</Project>
+			<Project name="Project 1" about="lorem18" link="#">
+				<SiReact className="w-full h-full"></SiReact>
+				<SiTypescript className="w-full h-full"></SiTypescript>
+			</Project>
 		</div>
 	);
 }
