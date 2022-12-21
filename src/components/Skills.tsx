@@ -2,20 +2,24 @@ import { SiReact } from "react-icons/si";
 
 export function Skills() {
 	return (
-		<div className="flex flex-wrap justify-center gap-4">
-			<Skill></Skill>
-			<Skill></Skill>
-			<Skill></Skill>
-			<Skill></Skill>
-			<Skill></Skill>
-			<Skill></Skill>
-			<Skill></Skill>
-			<Skill></Skill>
-			<Skill></Skill>
-			<Skill></Skill>
-			<Skill></Skill>
-			<Skill></Skill>
-			<Skill></Skill>
+		<div id="Skills" className="flex items-center min-h-screen">
+			<div className="flex flex-wrap justify-center gap-4">
+				<Skill></Skill>
+				<Skill></Skill>
+				<Skill></Skill>
+				<Skill></Skill>
+				<Skill></Skill>
+				<Skill></Skill>
+				<Skill></Skill>
+				<Skill></Skill>
+				<Skill></Skill>
+				<Skill></Skill>
+				<Skill></Skill>
+				<Skill></Skill>
+				<Skill></Skill>
+				<Skill></Skill>
+				<Skill></Skill>
+			</div>
 		</div>
 	);
 }

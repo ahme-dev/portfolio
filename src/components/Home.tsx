@@ -1,6 +1,6 @@
 export function Home() {
 	return (
-		<div className="flex flex-col justify-between h-[90vh]">
+		<div className="flex flex-col justify-between min-h-screen py-8">
 			{/* Top */}
 			<header className="flex justify-between gap-4">
 				{/* Logo */}
@@ -26,7 +26,7 @@ export function Home() {
 			<nav className="self-center flex items-center gap-0 bg-teal-100 text-neutral-900 font-bold rounded-3xl p-1">
 				{["Projects", "Skills", "Contact"].map((el) => (
 					<a
-						href="#"
+						href={`#${el}`}
 						className="hover:bg-neutral-900 hover:text-teal-100 px-4 py-2 rounded-3xl transition-all"
 					>
 						{el}

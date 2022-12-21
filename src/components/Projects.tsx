@@ -2,12 +2,14 @@ import { SiReact, SiTypescript } from "react-icons/si";
 
 export function Projects() {
 	return (
-		<div className="flex gap-4 overflow-x-scroll py-4">
-			<Project></Project>
-			<Project></Project>
-			<Project></Project>
-			<Project></Project>
-			<Project></Project>
+		<div id="Projects" className="flex items-center min-h-screen">
+			<div className="flex flex-col md:flex-row md:overflow-x-scroll md:py-4">
+				<Project></Project>
+				<Project></Project>
+				<Project></Project>
+				<Project></Project>
+				<Project></Project>
+			</div>
 		</div>
 	);
 }
