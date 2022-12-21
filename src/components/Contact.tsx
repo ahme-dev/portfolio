@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 export function Contact() {
+	const inputDivStyles =
+		"flex flex-col md:flex-row gap-2 border-2 rounded-3xl px-4 py-2 border-neutral-900 hover:bg-neutral-900 hover:text-neutral-100 focus-within:bg-neutral-900 focus-within:text-neutral-100 transition-all";
 	const [form, setForm] = useState({
 		name: "",
 		email: "",
@@ -11,7 +13,7 @@ export function Contact() {
 		<div className="flex flex-col md:grid md:grid-cols-2 gap-8">
 			{/* Left */}
 			<form className="flex flex-col gap-6 p-8 bg-teal-100 text-neutral-900 rounded-3xl">
-				<div className="flex flex-col md:flex-row gap-2 border-2 rounded-3xl px-4 py-2 border-neutral-900 hover:bg-neutral-900 hover:text-neutral-100 focus-within:bg-neutral-900 focus-within:text-neutral-100">
+				<div className={inputDivStyles}>
 					<label className="font-bold" htmlFor="name">
 						Name
 					</label>
@@ -25,7 +27,7 @@ export function Contact() {
 						type="text"
 					/>
 				</div>
-				<div className="flex flex-col md:flex-row gap-2 border-2 rounded-3xl px-4 py-2 border-neutral-900 hover:bg-neutral-900 hover:text-neutral-100 focus-within:bg-neutral-900 focus-within:text-neutral-100">
+				<div className={inputDivStyles}>
 					<label className="font-bold" htmlFor="email">
 						Email
 					</label>
@@ -40,7 +42,7 @@ export function Contact() {
 						type="email"
 					/>
 				</div>
-				<div className="flex flex-col md:flex-row gap-2 border-2 rounded-3xl px-4 py-2 border-neutral-900 hover:bg-neutral-900 hover:text-neutral-100 focus-within:bg-neutral-900 focus-within:text-neutral-100">
+				<div className={inputDivStyles}>
 					<label className="font-bold" htmlFor="message">
 						Message
 					</label>
@@ -54,7 +56,7 @@ export function Contact() {
 						className="bg-transparent w-full focus:outline-none max-h-24"
 					/>
 				</div>
-				<button className="rounded-3xl px-4 py-2 font-bold border-2 border-neutral-900 hover:bg-neutral-900 hover:text-neutral-100 w-fit self-end focus:text-neutral-100 focus:outline-none focus:bg-neutral-900">
+				<button className="rounded-3xl px-4 py-2 font-bold border-2 border-neutral-900 hover:bg-neutral-900 hover:text-neutral-100 w-fit self-end focus:text-neutral-100 focus:outline-none focus:bg-neutral-900 transition-all">
 					Send
 				</button>
 			</form>

@@ -24,24 +24,14 @@ export function Home() {
 
 			{/* Bottom Nav */}
 			<nav className="self-center flex items-center gap-0 bg-teal-100 text-neutral-900 font-bold rounded-3xl p-1">
-				<a
-					href="#"
-					className="hover:bg-neutral-900 hover:text-teal-100 px-4 py-2 rounded-3xl"
-				>
-					Projects
-				</a>
-				<a
-					href="#"
-					className="hover:bg-neutral-900 hover:text-teal-100 px-4 py-2 rounded-3xl"
-				>
-					Skills
-				</a>
-				<a
-					href="#"
-					className="hover:bg-neutral-900 hover:text-teal-100 px-4 py-2 rounded-3xl"
-				>
-					Contact
-				</a>
+				{["Projects", "Skills", "Contact"].map((el) => (
+					<a
+						href="#"
+						className="hover:bg-neutral-900 hover:text-teal-100 px-4 py-2 rounded-3xl transition-all"
+					>
+						{el}
+					</a>
+				))}
 			</nav>
 		</div>
 	);
