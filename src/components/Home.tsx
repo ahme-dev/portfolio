@@ -18,7 +18,7 @@ export function Home() {
 				{["Projects", "Skills", "Contact"].map((el) => (
 					<a
 						href={`#${el}`}
-						className="bg-teal-100/10 hover:bg-teal-100 hover:text-neutral-900 font-bold h-32 w-32 rounded-3xl grid place-items-center filter transition-all"
+						className="bg-teal-100/10 hover:bg-teal-100 hover:text-neutral-900 font-bold h-32 w-32 rounded-full grid place-items-center filter transition-all"
 					>
 						{el.toUpperCase()}
 					</a>
