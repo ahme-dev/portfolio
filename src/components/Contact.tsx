@@ -12,7 +12,7 @@ export function Contact() {
 	return (
 		<div
 			id="Contact"
-			className="flex flex-col md:grid md:grid-cols-2 gap-8 py-8"
+			className="flex flex-col md:flex-row md:[&>*]:basis-full gap-8 py-8"
 		>
 			{/* Left */}
 			<form className="flex flex-col gap-6 p-8 bg-teal-100 text-neutral-900 rounded-3xl">
