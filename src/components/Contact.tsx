@@ -65,7 +65,7 @@ export function Contact() {
 			</form>
 
 			{/* Right */}
-			<div className="flex flex-col justify-center text-lg gap-4 p-8">
+			<div className="flex flex-col justify-center text-lg gap-4 p-8 bg-teal-100/10 rounded-3xl">
 				<p>{form.email}</p>
 				<p>
 					Hi, <b>Ahmed</b>
