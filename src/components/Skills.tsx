@@ -5,7 +5,6 @@ import {
 	SiGo,
 	SiLinux,
 	SiMariadb,
-	SiMysql,
 	SiPhp,
 	SiReact,
 	SiRust,

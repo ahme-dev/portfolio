@@ -13,9 +13,10 @@ export function Home() {
 
 			{/* Nav */}
 			<nav className="flex flex-row gap-4 flex-wrap items-center justify-center w-full">
-				{["Projects", "Skills", "Contact"].map((el) => (
+				{["Projects", "Skills", "Contact"].map((el, id) => (
 					<a
 						href={`#${el}`}
+						key={id}
 						className="bg-teal-100/10 hover:bg-teal-100 hover:text-neutral-900 font-bold h-32 w-32 rounded-3xl md:rounded-full grid place-items-center filter transition-all hover:scale-105"
 					>
 						{el.toUpperCase()}

@@ -1,7 +1,6 @@
 import {
 	SiCsharp,
 	SiCss3,
-	SiFreedesktopdotorg,
 	SiGithub,
 	SiJavascript,
 	SiReact,
