@@ -43,15 +43,6 @@ export function Skills() {
 			<Skill name="SQL">
 				<SiMariadb />
 			</Skill>
-			<Skill name="Docker">
-				<SiDocker />
-			</Skill>
-			<Skill name="C#">
-				<SiCsharp />
-			</Skill>
-			<Skill name="C++">
-				<SiCplusplus />
-			</Skill>
 		</div>
 	);
 }

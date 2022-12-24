@@ -17,8 +17,9 @@ export default function App() {
 				className="fixed w-screen left-0 top-8 opacity-5 z-0"
 				src={ScatterImg}
 			/>
+
 			{/* App Components */}
-			<div className="flex flex-col gap-32 md:px-32 px-6 [&>*]:z-10">
+			<div className="flex flex-col gap-24 md:px-32 px-6 [&>*]:z-10">
 				<Home></Home>
 				<Projects></Projects>
 				<Skills></Skills>
