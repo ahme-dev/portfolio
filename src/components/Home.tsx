@@ -18,19 +18,19 @@ export function Home() {
 			<nav className="flex flex-row gap-4 flex-wrap items-center justify-center">
 				<a
 					href="mailto:ahmadkabdullah@proton.me"
-					className="w-20 bg-amber-100/10 hover:bg-amber-100 hover:text-neutral-900 rounded-full p-2 transition-all"
+					className="w-20 bg-amber-200/10 hover:bg-amber-200 hover:text-neutral-900 rounded-full p-2 transition-all"
 				>
 					<MdOutlineAlternateEmail className="h-full w-full cursor-pointer" />
 				</a>
 				<a
 					href="https://t.me/ahmedkabd"
-					className="w-20 bg-amber-100/10 hover:bg-amber-100 hover:text-neutral-900 rounded-full p-2 transition-all"
+					className="w-20 bg-amber-200/10 hover:bg-amber-200 hover:text-neutral-900 rounded-full p-2 transition-all"
 				>
 					<RiTelegramFill className="h-full w-full cursor-pointer" />
 				</a>
 				<a
 					href="https://github.com/ahmeddots"
-					className="w-20 bg-amber-100/10 hover:bg-amber-100 hover:text-neutral-900 rounded-full p-2 transition-all"
+					className="w-20 bg-amber-200/10 hover:bg-amber-200 hover:text-neutral-900 rounded-full p-2 transition-all"
 				>
 					<RiGithubFill className="h-full w-full cursor-pointer" />
 				</a>

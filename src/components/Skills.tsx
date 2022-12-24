@@ -49,7 +49,7 @@ export function Skills() {
 
 function Skill(props: { name: string; children: any }) {
 	return (
-		<div className="flex flex-col items-center justify-center group w-32 h-32 gap-2 p-8 bg-amber-100/10 hover:bg-amber-100 hover:text-neutral-900 rounded-3xl transition-all cursor-pointer hover:scale-105">
+		<div className="flex flex-col items-center justify-center group w-32 h-32 gap-2 p-8 bg-amber-200/10 hover:bg-amber-200 hover:text-neutral-900 rounded-3xl transition-all cursor-pointer hover:scale-105">
 			<div className="w-full h-full p-2 [&>*]:w-full [&>*]:h-full">
 				{props.children}
 			</div>
