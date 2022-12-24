@@ -1,7 +1,4 @@
 import {
-	SiCplusplus,
-	SiCsharp,
-	SiDocker,
 	SiGo,
 	SiLinux,
 	SiMariadb,

@@ -5,7 +5,7 @@ export function Home() {
 	return (
 		<div
 			id="Home"
-			className="flex flex-col md:flex-row items-center justify-center md:justify-between md:basis-full py-12 md:py-24 gap-16 h-[75vh]"
+			className="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 place-items-center md:basis-full pt-24 gap-16 h-[75vh]"
 		>
 			{/* Text */}
 			<p className="self-center justify-self-center max-w-lg font-bold text-2xl">
@@ -18,19 +18,19 @@ export function Home() {
 			<nav className="flex flex-row gap-4 flex-wrap items-center justify-center">
 				<a
 					href="mailto:ahmadkabdullah@proton.me"
-					className="w-24 bg-teal-100/10 hover:bg-teal-100 hover:text-neutral-900 rounded-full p-2 transition-all"
+					className="w-20 bg-teal-100/10 hover:bg-teal-100 hover:text-neutral-900 rounded-full p-2 transition-all"
 				>
 					<MdOutlineAlternateEmail className="h-full w-full cursor-pointer" />
 				</a>
 				<a
 					href="https://t.me/ahmedkabd"
-					className="w-24 bg-teal-100/10 hover:bg-teal-100 hover:text-neutral-900 rounded-full p-2 transition-all"
+					className="w-20 bg-teal-100/10 hover:bg-teal-100 hover:text-neutral-900 rounded-full p-2 transition-all"
 				>
 					<RiTelegramFill className="h-full w-full cursor-pointer" />
 				</a>
 				<a
 					href="https://github.com/ahmeddots"
-					className="w-24 bg-teal-100/10 hover:bg-teal-100 hover:text-neutral-900 rounded-full p-2 transition-all"
+					className="w-20 bg-teal-100/10 hover:bg-teal-100 hover:text-neutral-900 rounded-full p-2 transition-all"
 				>
 					<RiGithubFill className="h-full w-full cursor-pointer" />
 				</a>

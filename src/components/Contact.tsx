@@ -1,10 +1,4 @@
-import {
-	RiMailFill,
-	RiTelegramFill,
-	RiGithubFill,
-	RiCodeBoxFill,
-	RiArrowUpCircleFill,
-} from "react-icons/ri";
+import { RiCodeBoxFill, RiArrowUpCircleFill } from "react-icons/ri";
 
 export function Contact() {
 	return (
