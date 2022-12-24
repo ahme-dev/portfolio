@@ -5,7 +5,7 @@ export function Home() {
 	return (
 		<div
 			id="Home"
-			className="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 place-items-center md:basis-full pt-24 gap-16 h-[75vh]"
+			className="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 place-items-center md:basis-full pt-24 gap-2 md:gap-16 h-[75vh]"
 		>
 			{/* Text */}
 			<p className="self-center justify-self-center max-w-lg font-bold text-2xl">
