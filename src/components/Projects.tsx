@@ -51,7 +51,7 @@ export function Projects() {
 
 function Project(props: { name: string; about: string; children: any }) {
 	return (
-		<div className="md:basis-[30rem] h-fit shrink-0 flex flex-col group gap-8 p-8 bg-teal-100/10 hover:bg-teal-100 hover:text-neutral-900 rounded-3xl transition-all hover:-translate-y-2">
+		<div className="md:basis-[30rem] h-fit shrink-0 flex flex-col group gap-8 p-8 bg-amber-100/10 hover:bg-amber-100 hover:text-neutral-900 rounded-3xl transition-all hover:-translate-y-2">
 			{/* Top section */}
 			<div className="flex gap-4 justify-between">
 				{/* Tech used */}
