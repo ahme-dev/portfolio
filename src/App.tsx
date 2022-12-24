@@ -19,7 +19,7 @@ export default function App() {
 			/>
 
 			{/* App Components */}
-			<div className="flex flex-col gap-24 md:px-32 px-6 [&>*]:z-10">
+			<div className="flex flex-col gap-28 md:px-32 px-6 [&>*]:z-10">
 				<Home></Home>
 				<Projects></Projects>
 				<Skills></Skills>

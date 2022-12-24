@@ -11,40 +11,40 @@ import {
 
 export function Projects() {
 	return (
-		<div
-			id="Projects"
-			className="flex flex-col gap-4 md:flex-row md:overflow-x-scroll py-8"
-		>
-			<Project
-				name="Devpace"
-				about="Built as a tool for pacing and planning projects and coding time. This webapp uses VueJS in composition API style, along with extensive reliance on the amazing Pinia state management library. The UI was done with NaiveUI. You have notes, pomodoro, and stupid api text in one app."
-			>
-				<SiVuedotjs></SiVuedotjs>
-				<SiCss3></SiCss3>
-				<SiTypescript></SiTypescript>
-			</Project>
-			<Project
-				name="JournalV"
-				about="A desktop app made for day journaling, and dreams, too. It all depends on the rather small and blazingly fast Tauri toolkit, with Vue on top for the UI rendering. JournalV lets you create entries of the day, or the night, and encrypt then save them. Also can filter your entries and add tags to them."
-			>
-				<SiVuedotjs></SiVuedotjs>
-				<SiRust></SiRust>
-				<SiCss3></SiCss3>
-				<SiTypescript></SiTypescript>
-			</Project>
-			<Project
-				name="GetTube"
-				about="Made for downloading videos from youtube, facebook, and other sites. Built with C# and WPF, using icons from flaticon, it lets you paste in links and takes care of downloading video or audio using youtube-dl."
-			>
-				<SiCsharp></SiCsharp>
-			</Project>
-			<Project
-				name="Hawr"
-				about="A weather forecasting app, available in the kurdish language. Made with badly written React code and a free API, it forecasts 2 days ahead and shows you the temprature and weather for them."
-			>
-				<SiReact></SiReact>
-				<SiJavascript></SiJavascript>
-			</Project>
+		<div id="Projects">
+			<h1 className="font-bold text-2xl">Projects</h1>
+			<div className="flex flex-col gap-4 md:flex-row md:overflow-x-scroll py-8">
+				<Project
+					name="Devpace"
+					about="Built as a tool for pacing and planning projects and coding time. This webapp uses VueJS in composition API style, along with extensive reliance on the amazing Pinia state management library. The UI was done with NaiveUI. You have notes, pomodoro, and stupid api text in one app."
+				>
+					<SiVuedotjs></SiVuedotjs>
+					<SiCss3></SiCss3>
+					<SiTypescript></SiTypescript>
+				</Project>
+				<Project
+					name="JournalV"
+					about="A desktop app made for day journaling, and dreams, too. It all depends on the rather small and blazingly fast Tauri toolkit, with Vue on top for the UI rendering. JournalV lets you create entries of the day, or the night, and encrypt then save them. Also can filter your entries and add tags to them."
+				>
+					<SiVuedotjs></SiVuedotjs>
+					<SiRust></SiRust>
+					<SiCss3></SiCss3>
+					<SiTypescript></SiTypescript>
+				</Project>
+				<Project
+					name="GetTube"
+					about="Made for downloading videos from youtube, facebook, and other sites. Built with C# and WPF, using icons from flaticon, it lets you paste in links and takes care of downloading video or audio using youtube-dl."
+				>
+					<SiCsharp></SiCsharp>
+				</Project>
+				<Project
+					name="Hawr"
+					about="A weather forecasting app, available in the kurdish language. Made with badly written React code and a free API, it forecasts 2 days ahead and shows you the temprature and weather for them."
+				>
+					<SiReact></SiReact>
+					<SiJavascript></SiJavascript>
+				</Project>
+			</div>
 		</div>
 	);
 }

@@ -12,34 +12,37 @@ import {
 
 export function Skills() {
 	return (
-		<div id="Skills" className="flex flex-wrap justify-center gap-4 py-8">
-			<Skill name="Linux">
-				<SiLinux />
-			</Skill>
-			<Skill name="VueJS">
-				<SiVuedotjs />
-			</Skill>
-			<Skill name="Tailwind">
-				<SiTailwindcss />
-			</Skill>
-			<Skill name="Typescript">
-				<SiTypescript />
-			</Skill>
-			<Skill name="React">
-				<SiReact />
-			</Skill>
-			<Skill name="Go">
-				<SiGo />
-			</Skill>
-			<Skill name="Rust">
-				<SiRust />
-			</Skill>
-			<Skill name="PHP">
-				<SiPhp />
-			</Skill>
-			<Skill name="SQL">
-				<SiMariadb />
-			</Skill>
+		<div id="Skills">
+			<h1 className="font-bold text-2xl">Skills</h1>
+			<div className="flex flex-wrap justify-center gap-4 py-8">
+				<Skill name="Linux">
+					<SiLinux />
+				</Skill>
+				<Skill name="VueJS">
+					<SiVuedotjs />
+				</Skill>
+				<Skill name="Tailwind">
+					<SiTailwindcss />
+				</Skill>
+				<Skill name="Typescript">
+					<SiTypescript />
+				</Skill>
+				<Skill name="React">
+					<SiReact />
+				</Skill>
+				<Skill name="Go">
+					<SiGo />
+				</Skill>
+				<Skill name="Rust">
+					<SiRust />
+				</Skill>
+				<Skill name="PHP">
+					<SiPhp />
+				</Skill>
+				<Skill name="SQL">
+					<SiMariadb />
+				</Skill>
+			</div>
 		</div>
 	);
 }
