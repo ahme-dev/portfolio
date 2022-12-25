@@ -3,6 +3,7 @@ import {
 	SiCss3,
 	SiGithub,
 	SiJavascript,
+	SiMaterialui,
 	SiReact,
 	SiRust,
 	SiTypescript,
@@ -19,6 +20,7 @@ export function Projects() {
 					about="A weather forecasting app, available in English and Kurdish. Made with a React and a free API, it forecasts 2 days ahead and shows you temprature, change of rain and weather for them. It utilized React Query for fetching, Jotai for state management, and Material UI for the interface and icons."
 				>
 					<SiReact></SiReact>
+					<SiMaterialui></SiMaterialui>
 					<SiJavascript></SiJavascript>
 				</Project>
 				<Project
