@@ -10,7 +10,6 @@ import {
 	SiVuedotjs,
 	SiFirefox,
 } from "react-icons/si";
-import { FcLink } from "react-icons/fc";
 
 export function Projects() {
 	return (
