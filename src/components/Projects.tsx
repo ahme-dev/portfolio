@@ -9,6 +9,7 @@ import {
 	SiTypescript,
 	SiVuedotjs,
 	SiFirefox,
+	SiGo,
 } from "react-icons/si";
 
 export function Projects() {
@@ -42,6 +43,12 @@ export function Projects() {
 					<SiRust></SiRust>
 					<SiCss3></SiCss3>
 					<SiTypescript></SiTypescript>
+				</Project>
+				<Project
+					name="Centerm"
+					about="A terminal tool written in Go to interact with sound, power, brightness and networking. It acts as an interface for a number of tools and unifies your commands for the mentioned items. Centerm lets you connect-to/disconnect wifi connections, check battery charge level, adjust system sound, and create hotspots, if tools are installed."
+				>
+					<SiGo></SiGo>
 				</Project>
 				<Project
 					name="GetTube"
