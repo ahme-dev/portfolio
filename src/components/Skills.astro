@@ -1,0 +1,26 @@
+---
+import SkillsItem from "./SkillsItem.astro";
+
+const skills = [
+	"Linux",
+	"VueJS",
+	"TailwindCSS",
+	"Typescript",
+	"React",
+	"Go",
+	"Rust",
+	"PHP",
+	"MySQL",
+];
+---
+
+<div id="Skills">
+	<h1 class="font-bold text-2xl">Skills</h1>
+	<div class="flex flex-wrap justify-center gap-4 py-8">
+		{
+			skills.map((skill) => (
+				<SkillsItem title={skill} icon={skill.toLowerCase()} />
+			))
+		}
+	</div>
+</div>

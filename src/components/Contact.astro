@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div
+	id="Contact"
+	class="flex flex-col md:flex-row items-center justify-between gap-8 py-8"
+>
+	{/* left */}
+	<div class="flex place-items-center gap-2 h-14 p-3 font-bold">
+		© 2022 - ahmed.systems
+	</div>
+
+	{/* right */}
+	<div class="flex gap-2 h-14 p-3 transition-all">
+		<a href="#Home" class="h-full w-full">
+			<Icon name="ic:sharp-code" class="h-full w-full cursor-pointer" />
+		</a>
+		<a href="https://github.com/ahmeddots/ahmed.systems" class="h-full w-full">
+			<Icon
+				name="ic:baseline-arrow-circle-up"
+				class="h-full w-full cursor-pointer"
+			/>
+		</a>
+	</div>
+</div>

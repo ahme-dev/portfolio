@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div
+	id="Home"
+	class="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 place-items-center md:basis-full pt-24 gap-2 md:gap-16 h-[75vh]"
+>
+	{/* Text */}
+	<p class="self-center justify-self-center max-w-lg font-bold text-3xl">
+		Hi, my name's <b class="text-amber-200">Ahmed</b>.
+		<br />I thrive to write code that generates beautiful, usable interfaces and
+		software that is easy to use, dependable, and useful.
+	</p>
+
+	{/* Nav */}
+	<nav class="flex flex-row gap-4 flex-wrap items-center justify-center">
+		<a
+			href="mailto:ahmadkabdullah@proton.me"
+			class="w-20 bg-amber-200/10 hover:bg-amber-200 hover:text-neutral-900 rounded-full p-2 transition-all"
+		>
+			<Icon
+				name="ic:round-alternate-email"
+				class="h-full w-full cursor-pointer"
+			/>
+		</a>
+		<a
+			href="https://t.me/ahmedkabd"
+			class="w-20 bg-amber-200/10 hover:bg-amber-200 hover:text-neutral-900 rounded-full p-2 transition-all"
+		>
+			<Icon name="ic:sharp-telegram" class="h-full w-full cursor-pointer" />
+		</a>
+		<a
+			href="https://github.com/ahmeddots"
+			class="w-20 bg-amber-200/10 hover:bg-amber-200 hover:text-neutral-900 rounded-full p-2 transition-all"
+		>
+			<Icon name="mdi:github" class="h-full w-full cursor-pointer" />
+		</a>
+	</nav>
+</div>
