@@ -1,13 +1,13 @@
 ---
-import DefaultLayout from './DefaultLayout.astro'
+import DefaultLayout from "./DefaultLayout.astro";
 
-const { frontmatter } = Astro.props
+const { frontmatter } = Astro.props;
 ---
 
 <DefaultLayout title={frontmatter.title}>
-  <div class="container">
-    <div class="space-content my-12">
-      <slot />
-    </div>
-  </div>
+	<div class="px-12">
+		<div class="space-content my-12">
+			<slot />
+		</div>
+	</div>
 </DefaultLayout>
