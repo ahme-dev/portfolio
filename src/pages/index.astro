@@ -1,16 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import DefaultLayout from "../layouts/DefaultLayout.astro";
 import Home from "../components/Home.astro";
 import Projects from "../components/Projects.astro";
 import Skills from "../components/Skills.astro";
 import Contact from "../components/Contact.astro";
 ---
 
-<Layout title="Ahmed Systems">
+<DefaultLayout title="Ahmed Systems">
 	<main class="flex flex-col gap-28 md:px-32 px-6">
 		<Home />
 		<Projects />
 		<Skills />
 		<Contact />
 	</main>
-</Layout>
+</DefaultLayout>
