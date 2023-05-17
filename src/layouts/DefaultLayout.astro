@@ -27,8 +27,18 @@ const {
 			author={author}
 		/>
 	</head>
-	<body class="bg-neutral-900 text-neutral-100">
-		<main id="main-content">
+	<body class="relative bg-neutral-900 text-neutral-100">
+		<img
+			src="/waves.svg"
+			class="absolute left-0 top-0 -z-10 w-[100vw] opacity-10"
+		/>
+
+		<nav>
+			<a href="/blog/">Blog</a>
+			<a href="/">Home</a>
+		</nav>
+
+		<main>
 			<slot />
 		</main>
 	</body>
