@@ -1,7 +1,7 @@
 ---
-const { title, description, url, image, author } = Astro.props
+const { title, description, url, image, author } = Astro.props;
 
-let subtitle = 'Accessible Astro Starter'
+let subtitle = "Ahmed's Website and Blog";
 ---
 
 <!-- general meta -->
@@ -14,9 +14,10 @@ let subtitle = 'Accessible Astro Starter'
 <meta property="og:description" content={description} />
 <meta property="og:type" content="website" />
 <meta property="og:url" content={url} />
-<meta property="og:image" content={Astro.site ? `${Astro.site}${image}` : image} />
-
-<!-- twitter card -->
+<meta
+	property="og:image"
+	content={Astro.site ? `${Astro.site}${image}` : image}
+/>
 
 <!-- page title -->
-<title>{title} - {subtitle}</title>
+<title>{title}</title>
