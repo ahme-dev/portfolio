@@ -6,20 +6,11 @@ import Skills from "../components/Skills.astro";
 import Contact from "../components/Contact.astro";
 ---
 
-<Layout title="ahmed.systems">
-	<div class="bg-neutral-900 text-neutral-100 min-h-screen overflow-hidden">
-		{/* Background */}
-		<img
-			class="absolute w-screen left-0 top-0 opacity-10 z-0"
-			src="/waves.svg"
-		/>
-
-		{/* App Components */}
-		<div class="flex flex-col gap-28 md:px-32 px-6 [&>*]:z-10">
-			<Home />
-			<Projects />
-			<Skills />
-			<Contact />
-		</div>
-	</div>
+<Layout title="Ahmed Systems">
+	<main class="flex flex-col gap-28 md:px-32 px-6">
+		<Home />
+		<Projects />
+		<Skills />
+		<Contact />
+	</main>
 </Layout>

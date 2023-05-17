@@ -21,7 +21,16 @@ const { title } = Astro.props;
 			rel="stylesheet"
 		/>
 	</head>
-	<body>
+	<body class="relative">
+		<img
+			class="absolute w-screen left-0 top-0 opacity-[15%] -z-10"
+			src="/waves.svg"
+		/>
+
+		<nav>
+			<a href="/blog/" class="bg-red-400">Blog</a>
+		</nav>
+
 		<slot />
 	</body>
 </html>
@@ -29,6 +38,7 @@ const { title } = Astro.props;
 <style is:global>
 	body {
 		background-color: #171717;
+		color: #f5f5f5;
 		font-family: "Oswald", sans-serif;
 	}
 </style>
