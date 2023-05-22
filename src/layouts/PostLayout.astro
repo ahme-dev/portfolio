@@ -5,14 +5,21 @@ const { frontmatter } = Astro.props;
 ---
 
 <DefaultLayout title={frontmatter.title}>
-	<div class="mx-auto flex max-w-4xl flex-col gap-8 px-8 py-12">
+	<article class="mx-auto flex max-w-3xl flex-col gap-8 px-8 py-12">
 		<a class="underline" href="/blog/">all posts</a>
-		<div>
-			<h1 class="text-lg font-bold">{"# " + frontmatter.title}</h1>
+		<header class="bg-indigo-300/30 px-8 py-2">
 			<p class="text-sm">{"Posted: " + frontmatter.date}</p>
-		</div>
-		<div class="flex flex-col gap-4">
+			<h1 class="text-2xl font-bold">{frontmatter.title}</h1>
+			<h2 class="font-bold">{frontmatter.subtitle}</h2>
+		</header>
+		<section class="flex flex-col gap-4">
 			<slot />
-		</div>
-	</div>
+		</section>
+	</article>
 </DefaultLayout>
+
+<style>
+	* {
+		font-size: large;
+	}
+</style>
