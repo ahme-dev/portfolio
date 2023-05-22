@@ -6,11 +6,11 @@ const { frontmatter } = Astro.props;
 
 <MarkdownLayout title={frontmatter.title}>
 	<article class="flex flex-col items-center gap-12 py-8">
-		<header class="w-full bg-indigo-300/20 uppercase">
+		<header class="w-full bg-indigo-300/20">
 			<div class="mx-auto max-w-3xl px-8 py-4">
-				<p class="text-sm">{"Posted: " + frontmatter.date}</p>
-				<h1 class="text-2xl font-bold">{frontmatter.title}</h1>
-				<h2 class="font-bold">{frontmatter.subtitle}</h2>
+				<p class="text-sm">{"Written: " + frontmatter.date}</p>
+				<h1 class="text-2xl font-bold uppercase">{frontmatter.title}</h1>
+				<h2 class="uppercase">{frontmatter.subtitle}</h2>
 			</div>
 		</header>
 
