@@ -29,6 +29,14 @@ import "@fontsource-variable/outfit";
 		/>
 
 		<style is:global>
+			:root {
+				--fontsource-display: optional;
+			}
+
+			@font-face {
+				font-display: var(--fontsource-display, swap);
+			}
+
 			body {
 				font-family: "Outfit Variable", sans-serif;
 			}
