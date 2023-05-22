@@ -6,6 +6,7 @@ const {
 	image = "/social-preview-image.png",
 	author = "Ahmed",
 } = Astro.props;
+import "@fontsource-variable/outfit";
 ---
 
 <html lang="en" dir="ltr">
@@ -26,6 +27,12 @@ const {
 			image={image}
 			author={author}
 		/>
+
+		<style is:global>
+			body {
+				font-family: "Outfit Variable", sans-serif;
+			}
+		</style>
 	</head>
 	<body class="relative bg-neutral-900 text-neutral-100">
 		<img
