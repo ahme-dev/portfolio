@@ -1,31 +1,27 @@
 ---
-import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import MarkdownLayout from "../../layouts/MarkdownLayout.astro";
 const posts = await Astro.glob("./posts/*.mdx");
 ---
 
-<DefaultLayout>
-	<div class="flex flex-row items-center gap-4 px-8 py-4">
-		<h1 class="text-lg font-bold uppercase">Ahmed's Blog</h1>
-		<a class="lowercase underline" href="/">Return To Main Site</a>
-	</div>
+<MarkdownLayout>
 	<div class="mx-auto flex max-w-3xl flex-col gap-8 p-8 px-12">
 		<div>
-			<h1 class="text-xl font-bold">Check out some of the posts I made.</h1>
-			<p class="text-sm">You might like them.</p>
+			<h1 class="text-2xl font-bold">Check out some of the posts I made.</h1>
+			<p class="text-md">You might like them.</p>
 		</div>
 
 		<ul>
 			{
 				posts.map((post) => (
 					<a href={post.url}>
-						<li class="rounded-md border border-transparent bg-neutral-500/10 px-4 py-2 transition-colors hover:border-blue-600/50">
+						<li class="bg-neutral-500/10 px-4 py-2 transition-colors hover:bg-indigo-300/20">
 							<div class="flex flex-row items-center gap-4">
 								<div>
 									<p class="font-bold">{post.frontmatter.date}</p>
 								</div>
 								<div class="flex flex-col">
-									<p>{post.frontmatter.title}</p>
-									<p class="text-sm">{post.frontmatter.subtitle}</p>
+									<p class="text-lg">{post.frontmatter.title}</p>
+									<p class="text-md">{post.frontmatter.subtitle}</p>
 								</div>
 							</div>
 						</li>
@@ -34,4 +30,4 @@ const posts = await Astro.glob("./posts/*.mdx");
 			}
 		</ul>
 	</div>
-</DefaultLayout>
+</MarkdownLayout>

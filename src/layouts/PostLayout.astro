@@ -1,29 +1,25 @@
 ---
-import DefaultLayout from "./DefaultLayout.astro";
+import MarkdownLayout from "./MarkdownLayout.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
-<DefaultLayout title={frontmatter.title}>
-	<article class="mx-auto flex max-w-3xl flex-col gap-8 py-12">
-		<div class="px-8">
-			<a class="underline" href="/blog/">all posts</a>
-		</div>
-
-		<header class="bg-indigo-300/20 px-8 py-2">
-			<p class="text-sm">{"Posted: " + frontmatter.date}</p>
-			<h1 class="text-2xl font-bold">{frontmatter.title}</h1>
-			<h2 class="font-bold">{frontmatter.subtitle}</h2>
+<MarkdownLayout title={frontmatter.title}>
+	<article class="flex flex-col items-center gap-12 py-8">
+		<header class="w-full bg-indigo-300/20 uppercase">
+			<div class="mx-auto max-w-3xl px-8 py-4">
+				<p class="text-sm">{"Posted: " + frontmatter.date}</p>
+				<h1 class="text-2xl font-bold">{frontmatter.title}</h1>
+				<h2 class="font-bold">{frontmatter.subtitle}</h2>
+			</div>
 		</header>
 
-		<section class="flex flex-col gap-4 px-8">
+		<section
+			class={`flex flex-col gap-4 px-8 max-w-3xl
+				prose-h2:mb-2 prose-h2:mt-4 prose-h2:text-xl prose-h2:font-bold prose-h2:uppercase
+				prose-p:text-lg`}
+		>
 			<slot />
 		</section>
 	</article>
-</DefaultLayout>
-
-<style>
-	* {
-		font-size: large;
-	}
-</style>
+</MarkdownLayout>
