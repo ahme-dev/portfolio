@@ -1,18 +1,31 @@
 ---
 import DefaultLayout from "../../layouts/DefaultLayout.astro";
 const posts = await Astro.glob("./posts/*.mdx");
-console.log(posts);
 ---
 
 <DefaultLayout>
-	<div class="flex flex-col gap-8 px-12">
-		<h1 class="text-xl font-bold">Posts:</h1>
-		<ul class="rounded-md bg-neutral-500/10 p-2">
+	<div class="mx-auto flex max-w-3xl flex-col gap-8 p-8 px-12">
+		<div>
+			<h1 class="text-xl font-bold">Check out some of the posts I made.</h1>
+			<p class="text-sm">You might like them.</p>
+		</div>
+
+		<ul>
 			{
 				posts.map((post) => (
-					<li class="hover:font-bold">
-						<a href={post.url}>{post.frontmatter.title}</a>
-					</li>
+					<a href={post.url}>
+						<li class="rounded-md border border-transparent bg-neutral-500/10 px-4 py-2 transition-colors hover:border-blue-600/50">
+							<div class="flex flex-row items-center gap-4">
+								<div>
+									<p class="font-bold">{post.frontmatter.date}</p>
+								</div>
+								<div class="flex flex-col">
+									<p>{post.frontmatter.title}</p>
+									<p class="text-sm">{post.frontmatter.subtitle}</p>
+								</div>
+							</div>
+						</li>
+					</a>
 				))
 			}
 		</ul>
