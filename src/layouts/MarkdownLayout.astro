@@ -6,19 +6,17 @@ const { title } = Astro.props;
 ---
 
 <DefaultLayout title={title}>
-	<div class="flex flex-row items-center justify-between">
-		<div class="flex flex-row items-center gap-4 px-8 py-4">
+	<div class="flex flex-row items-center justify-between gap-4 px-8 py-4">
+		<div class="flex flex-row items-center gap-4">
 			<a href="/">
 				<Icon name="mdi:chevron-left" class="h-10 w-10" />
 			</a>
 			<h1 class="text-xl font-bold uppercase">Ahmed's Blog</h1>
 		</div>
 
-		<div class="max-w-3xl self-start px-8 py-4">
-			<a class="flex flex-row items-center gap-4" href="/blog/">
-				<Icon name="mdi:view-list" class="h-10 w-10 p-1" />
-			</a>
-		</div>
+		<a href="/blog/">
+			<Icon name="mdi:view-list" class="h-10 w-10 p-1" />
+		</a>
 	</div>
 
 	<slot />

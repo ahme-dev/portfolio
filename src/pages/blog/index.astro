@@ -14,7 +14,7 @@ const posts = await Astro.glob("./posts/*.mdx");
 			{
 				posts.map((post) => (
 					<a href={post.url}>
-						<li class="bg-neutral-500/10 px-4 py-4 transition-colors hover:bg-indigo-300/20">
+						<li class="bg-neutral-500/10 px-6 py-4 transition-colors hover:bg-indigo-300/20">
 							<div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
 								<div class="flex flex-col items-start text-sm sm:items-end">
 									<p>{post.frontmatter.date.split(",")[0]}</p>
