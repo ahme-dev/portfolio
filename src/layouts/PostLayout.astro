@@ -15,7 +15,9 @@ const { frontmatter } = Astro.props;
 		</header>
 
 		<section
-			class={`flex flex-col gap-4 px-8 max-w-3xl
+			class={`flex flex-col gap-4 px-4 max-w-3xl
+				prose-pre:!bg-neutral-600/20 prose-pre:rounded-xl prose-pre:text-sm
+				prose-pre:mx-4 prose-pre:py-2 prose-pre:px-3 prose-pre:w-fit prose-pre:max-w-xs sm:prose-pre:max-w-none
 				prose-blockquote:italic prose-blockquote:text-neutral-400
 				prose-li:before:content-['→_'] prose-li:text-lg prose-li:-indent-4 prose-li:ps-8
 				prose-a:after:content-['_↗'] prose-a:underline
