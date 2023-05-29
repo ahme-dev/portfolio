@@ -17,7 +17,8 @@ const { frontmatter } = Astro.props;
 		<section
 			class={`flex flex-col gap-4 px-8 max-w-3xl
 				prose-blockquote:italic prose-blockquote:text-neutral-400
-				prose-li:before:content-['→_'] prose-li:text-lg prose-li:indent-4
+				prose-li:before:content-['→_'] prose-li:text-lg prose-li:-indent-4 prose-li:ps-8
+				prose-a:after:content-['_↗'] prose-a:underline
 				prose-h2:mb-2 prose-h2:mt-4 prose-h2:text-xl prose-h2:font-bold prose-h2:uppercase
 				prose-p:text-lg prose-p:text-justify prose-p:indent-4
 				`}
