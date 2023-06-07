@@ -13,7 +13,15 @@ import Skill from "../components/Skill.astro";
 		<!-- Projects -->
 		<section class="min-h-[70vh]">
 			<h1 class="text-2xl font-bold">Projects</h1>
-			<div class="flex flex-col gap-4 py-8 md:flex-row md:overflow-x-scroll">
+			<div
+				class="flex flex-col gap-4 py-8 md:flex-row md:overflow-x-scroll"
+			>
+				<Project
+					title={"KurdGPT"}
+					about="A telegram bot that connects kurdish speaking people to chatGPT. The bot is built using Typescript and Grammy framework, and is hosted on fly.io. It sends requests to OpenAI's API and returns the response to the user, but it adds a translation layer using Google Translation API to translate between the user and AI."
+					techs={["typescript"]}
+				/>
+
 				<Project
 					title={"Oswald"}
 					about="POS System for handling small shops inventory and sales. Available in English and Kurdish. The project is in Typescript, with frontend done in React using Mantine components and heroicons, and the state management using indigoux Toolkit. The backend is entirely handled by Pocketbase. It handles products, categories, transactions with a multi-checkout system, and light/dark multi-colouindigo themes."
@@ -24,7 +32,13 @@ import Skill from "../components/Skill.astro";
 					title={"Countries"}
 					about="Quiz PWA in React about countries, capitals and flags, in English and Kurdish. The frontend is done with React and ChakraUI connecting to an express backend with React Query. There are two games: one for guessing capitals of countries, and another for guessing countries' names from flags."
 					previewLink="https://countries.ahmed.systems"
-					techs={["react", "chakraui", "typescript", "nodejs", "express"]}
+					techs={[
+						"react",
+						"chakraui",
+						"typescript",
+						"nodejs",
+						"express",
+					]}
 				/>
 
 				<Project
