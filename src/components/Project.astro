@@ -6,6 +6,7 @@ export interface Props {
 	about: string;
 	previewLink?: string;
 	techs: string[];
+	closedSource?: boolean;
 }
 
 const props = Astro.props;
@@ -35,13 +36,20 @@ const props = Astro.props;
 					</a>
 				)
 			}
-			<a
-				href={"https://github.com/ahmeddots/" + props.title.toLowerCase()}
-				target="_blank"
-				class="flex gap-2 h-8 w-8 border-2 rounded-full p-1 font-bold border-neutral-900 hover:bg-neutral-900 hover:text-neutral-100 transition-all cursor-pointer"
-			>
-				<Icon name="mdi:github" />
-			</a>
+			{
+				!props.closedSource && (
+					<a
+						href={
+							"https://github.com/ahmeddots/" +
+							props.title.toLowerCase()
+						}
+						target="_blank"
+						class="flex gap-2 h-8 w-8 border-2 rounded-full p-1 font-bold border-neutral-900 hover:bg-neutral-900 hover:text-neutral-100 transition-all cursor-pointer"
+					>
+						<Icon name="mdi:github" />
+					</a>
+				)
+			}
 		</div>
 	</div>
 
