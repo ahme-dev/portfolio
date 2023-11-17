@@ -1,8 +1,8 @@
 {
-	"name": "personalSite",
-	"description": "My Personal Site and Blog",
+	"name": "portfolio",
+	"description": "My Personal Portfolio",
 	"version": "1.0.0",
-	"author": "Ahmed K. A.",
+	"author": "ahme-dev",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",

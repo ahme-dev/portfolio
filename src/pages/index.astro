@@ -6,16 +6,14 @@ import Project from "../components/Project.astro";
 import Skill from "../components/Skill.astro";
 ---
 
-<DefaultLayout title="Ahmed Systems">
+<DefaultLayout title="Ahmed's Portfolio">
 	<main class="flex flex-col gap-28 px-6 md:px-32">
 		<Hero />
 
 		<!-- Projects -->
 		<section class="min-h-[70vh]">
 			<h1 class="text-2xl font-bold">Projects</h1>
-			<div
-				class="flex flex-col gap-4 py-8 md:flex-row md:overflow-x-scroll"
-			>
+			<div class="flex flex-col gap-4 py-8 md:flex-row md:overflow-x-scroll">
 				<Project
 					title={"All Kurdistan Jobs"}
 					previewLink="https://allkurdistanjobs.vercel.app"
@@ -32,7 +30,7 @@ import Skill from "../components/Skill.astro";
 
 				<Project
 					title={"Oswald"}
-					about="POS System for handling small shops inventory and sales. Available in English and Kurdish. The project is in Typescript, with frontend done in React using Mantine components and heroicons, and the state management using indigoux Toolkit. The backend is entirely handled by Pocketbase. It handles products, categories, transactions with a multi-checkout system, and light/dark multi-colouindigo themes."
+					about="POS System for handling small shops inventory and sales. Available in English and Kurdish. The project is in Typescript, with frontend done in React using Mantine components and heroicons, and the state management using orangeux Toolkit. The backend is entirely handled by Pocketbase. It handles products, categories, transactions with a multi-checkout system, and light/dark multi-colouorange themes."
 					techs={["react", "redux", "typescript"]}
 				/>
 
@@ -40,13 +38,7 @@ import Skill from "../components/Skill.astro";
 					title={"Countries"}
 					about="Quiz PWA in React about countries, capitals and flags, in English and Kurdish. The frontend is done with React and ChakraUI connecting to an express backend with React Query. There are two games: one for guessing capitals of countries, and another for guessing countries' names from flags."
 					previewLink="https://countries.ahmed.systems"
-					techs={[
-						"react",
-						"chakraui",
-						"typescript",
-						"nodejs",
-						"express",
-					]}
+					techs={["react", "chakraui", "typescript", "nodejs", "express"]}
 				/>
 
 				<Project

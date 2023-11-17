@@ -6,7 +6,7 @@ const { frontmatter } = Astro.props;
 
 <MarkdownLayout title={frontmatter.title}>
 	<article class="flex flex-col items-center gap-12 py-8">
-		<header class="w-full bg-indigo-300/20">
+		<header class="w-full bg-teal-300/20">
 			<div class="mx-auto max-w-3xl px-8 py-4">
 				<p class="text-sm">{"Written: " + frontmatter.date}</p>
 				<h1 class="text-2xl font-bold uppercase">{frontmatter.title}</h1>
@@ -16,13 +16,13 @@ const { frontmatter } = Astro.props;
 
 		<section
 			class={`flex flex-col gap-4 px-4 max-w-3xl
-				prose-pre:!bg-neutral-600/20 prose-pre:rounded-xl prose-pre:text-sm
-				prose-pre:mx-4 prose-pre:py-2 prose-pre:px-3 prose-pre:w-fit prose-pre:max-w-xs sm:prose-pre:max-w-none
-				prose-blockquote:italic prose-blockquote:text-neutral-400
-				prose-li:before:content-['→_'] prose-li:text-lg prose-li:-indent-4 prose-li:ps-8
-				prose-a:after:content-['_↗'] prose-a:underline
-				prose-h2:mb-2 prose-h2:mt-4 prose-h2:text-xl prose-h2:font-bold prose-h2:uppercase
-				prose-p:text-lg prose-p:text-justify prose-p:indent-4
+				pteal-pre:!bg-neutral-600/20 pteal-pre:rounded-xl pteal-pre:text-sm
+				pteal-pre:mx-4 pteal-pre:py-2 pteal-pre:px-3 pteal-pre:w-fit pteal-pre:max-w-xs sm:pteal-pre:max-w-none
+				pteal-blockquote:italic pteal-blockquote:text-neutral-400
+				pteal-li:before:content-['→_'] pteal-li:text-lg pteal-li:-indent-4 pteal-li:ps-8
+				pteal-a:after:content-['_↗'] pteal-a:underline
+				pteal-h2:mb-2 pteal-h2:mt-4 pteal-h2:text-xl pteal-h2:font-bold pteal-h2:uppercase
+				pteal-p:text-lg pteal-p:text-justify pteal-p:indent-4
 				`}
 		>
 			<slot />

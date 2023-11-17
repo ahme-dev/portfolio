@@ -13,11 +13,11 @@ const props = Astro.props;
 ---
 
 <div
-	class="md:basis-[30rem] overflow-hidden h-fit shrink-0 flex flex-col group bg-indigo-300/10 hover:bg-indigo-300 hover:text-neutral-900 hover:rounded-3xl transition-all hover:-translate-y-2"
+	class="group flex h-fit shrink-0 flex-col overflow-hidden bg-teal-300/10 transition-all hover:-translate-y-2 hover:rounded-3xl hover:bg-teal-300 hover:text-neutral-900 md:basis-[30rem]"
 >
 	{/* Top section */}
 	<div
-		class="flex flex-wrap gap-4 justify-between bg-indigo-300 group-hover:bg-indigo-200 p-8 text-neutral-900"
+		class="flex flex-wrap justify-between gap-4 bg-teal-300 p-8 text-neutral-900 group-hover:bg-teal-200"
 	>
 		{/* Tech used */}
 		<div class="flex flex-wrap items-center gap-2 [&>*]:h-6 [&>*]:w-6">
@@ -30,7 +30,7 @@ const props = Astro.props;
 					<a
 						href={props.previewLink}
 						target="_blank"
-						class="flex gap-2 h-8 w-8 border-2 rounded-full p-1 font-bold border-neutral-900 hover:bg-neutral-900 hover:text-neutral-100 transition-all cursor-pointer"
+						class="flex h-8 w-8 cursor-pointer gap-2 rounded-full border-2 border-neutral-900 p-1 font-bold transition-all hover:bg-neutral-900 hover:text-neutral-100"
 					>
 						<Icon name="mdi:firefox" />
 					</a>
@@ -39,12 +39,9 @@ const props = Astro.props;
 			{
 				!props.closedSource && (
 					<a
-						href={
-							"https://github.com/ahmeddots/" +
-							props.title.toLowerCase()
-						}
+						href={"https://github.com/ahme-dev/" + props.title.toLowerCase()}
 						target="_blank"
-						class="flex gap-2 h-8 w-8 border-2 rounded-full p-1 font-bold border-neutral-900 hover:bg-neutral-900 hover:text-neutral-100 transition-all cursor-pointer"
+						class="flex h-8 w-8 cursor-pointer gap-2 rounded-full border-2 border-neutral-900 p-1 font-bold transition-all hover:bg-neutral-900 hover:text-neutral-100"
 					>
 						<Icon name="mdi:github" />
 					</a>
@@ -55,7 +52,7 @@ const props = Astro.props;
 
 	{/* Bottom section */}
 	<div class="flex flex-col gap-4 p-8">
-		<h1 class="font-bold text-lg">{props.title}</h1>
+		<h1 class="text-lg font-bold">{props.title}</h1>
 		<p>{props.about}</p>
 	</div>
 </div>
