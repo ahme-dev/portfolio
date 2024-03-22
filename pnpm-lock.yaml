@@ -4,6 +4,14 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  '@cloudgakkai/qwik-aos':
+    specifier: ^0.2.0
+    version: 0.2.0
+  '@fontsource-variable/josefin-sans':
+    specifier: ^5.0.20
+    version: 5.0.20
+
 devDependencies:
   '@builder.io/qwik':
     specifier: ^1.5.1
@@ -39,7 +47,7 @@ devDependencies:
     specifier: ^3.2.5
     version: 3.2.5
   prettier-plugin-tailwindcss:
-    specifier: ^0.5.4
+    specifier: ^0.5.12
     version: 0.5.12(prettier@3.2.5)
   tailwindcss:
     specifier: 3.3.3
@@ -113,6 +121,11 @@ packages:
       - sugarss
       - terser
     dev: true
+
+  /@cloudgakkai/qwik-aos@0.2.0:
+    resolution: {integrity: sha512-zZJn7H1DryqSIFv7ul6/cNjM8C+iB9I/RVBfj+OXgsbwgq3EC7KaG8mCXRWVvBee2e4VNtxzHrMPTYa3EONsng==}
+    engines: {node: '>=15.0.0'}
+    dev: false
 
   /@emnapi/runtime@0.45.0:
     resolution: {integrity: sha512-Txumi3td7J4A/xTTwlssKieHKTGl3j4A1tglBx72auZ49YK7ePY6XZricgIg9mnZT4xPfA+UPCUdnhRuEFDL+w==}
@@ -365,6 +378,10 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@fontsource-variable/josefin-sans@5.0.20:
+    resolution: {integrity: sha512-18pRxL/jA7HFT+bMsFsDHFPTJ2lTxMK3eMQt5cruQ9/RWFqci2Pp0R4iQz6qr09nMslfJudEsXt06LX2AuQ34Q==}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}

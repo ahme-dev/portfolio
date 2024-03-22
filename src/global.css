@@ -1,7 +1,73 @@
-/**
- * Tailwind CSS imports
- * View the full documentation at https://tailwindcss.com
- */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* default styles */
+
+body {
+	font-family: "Josefin Sans Variable", sans-serif;
+	text-shadow: 1px 2px 0px #222;
+
+	@apply bg-zinc-900 text-zinc-50;
+}
+
+/* animations */
+
+.animate-updown {
+	@apply animate-[updown_3s_ease-in-out_infinite];
+}
+
+.animate-fadeIn {
+	@apply animate-[fadeIn_2s];
+}
+
+.animate-saturate {
+	@apply animate-[saturate_3s_ease-in-out_infinite];
+}
+
+.animate-scaleUp {
+	@apply animate-[scaleUp_2s];
+	animation-fill-mode: forwards;
+}
+
+@keyframes updown {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes saturate {
+	0% {
+		filter: saturate(100%);
+	}
+	50% {
+		filter: saturate(50%);
+	}
+	100% {
+		filter: saturate(100%);
+	}
+}
+
+@keyframes scaleUp {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.8);
+	}
+}
