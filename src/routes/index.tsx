@@ -4,16 +4,18 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 export default component$(() => {
 	return (
 		<>
-			<div class="min-h-[100dvh] py-8 relative flex justify-center flex-col max-w-5xl mx-auto gap-4 px-4 snap-center">
-				<h3 class="text-5xl">Hello! My Name's</h3>
-				<h1 class="text-8xl xl:text-[12rem] font-bold leading-none">Ahmed</h1>
-				<p class="relative xl:bottom-10 max-w-lg text-lg">
-					I'm a software engineer working primarily on
-					<span class="font-bold text-xl"> web technologies</span>. I'm
-					passionate about exploring new technologies and building cool stuff.
-				</p>
+			<div class="min-h-[100dvh] py-8 relative flex justify-center flex-col max-w-5xl mx-auto gap-4 snap-center">
+				<div class="flex flex-col gap-4 px-4 relative xl:bottom-0 bottom-10">
+					<h3 class="text-5xl">Hello! My Name's</h3>
+					<h1 class="text-8xl xl:text-[12rem] font-bold leading-none">Ahmed</h1>
+					<p class="relative xl:bottom-10 max-w-lg text-lg">
+						I'm a software engineer working primarily on
+						<span class="font-bold text-xl"> web technologies</span>. I'm
+						passionate about exploring new technologies and building cool stuff.
+					</p>
+				</div>
 
-				<div class="absolute opacity-70 xl:opacity-100 -right-44 xl:right-16 -z-10 top-1/4 animate-scaleUp">
+				<div class="absolute pointer-events-none opacity-70 xl:opacity-100 -right-44 xl:right-16 -z-10 top-1/4 animate-scaleUp">
 					<svg
 						width="300"
 						height="300"
@@ -53,9 +55,23 @@ export default component$(() => {
 					</svg>
 				</div>
 
-				<div class="absolute left-[45%] xl:left-[50%] -z-10 bottom-12">
+				<div class="absolute cursor-pointer z-10 w-full gap-6 bottom-8 flex items-center flex-col mx-auto px-2">
+					<div class="grid grid-cols-3 gap-4">
+						<a href="#" class="underline cursor-pointer">
+							Contact
+						</a>
+
+						<a href="#" class="underline cursor-pointer">
+							Projects
+						</a>
+
+						<a href="#" class="underline cursor-pointer">
+							About
+						</a>
+					</div>
+
 					<svg
-						class="animate-bounce rotate-180"
+						class="animate-bounce rotate-180 pointer-events-none"
 						xmlns="http://www.w3.org/2000/svg"
 						width="2rem"
 						height="2rem"

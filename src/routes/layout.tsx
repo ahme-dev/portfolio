@@ -17,6 +17,8 @@ export default component$(() => {
 	return (
 		<>
 			<main class="scroll-smooth animate-fadeIn w-screen overflow-hidden">
+				<div class="bg-pattern" />
+
 				<Slot />
 			</main>
 		</>
