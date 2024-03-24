@@ -28,6 +28,10 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/*.code-snippets
 
+# lock files
+package-lock.json
+pnpm-lock.yaml
+
 .idea
 .DS_Store
 *.suo
