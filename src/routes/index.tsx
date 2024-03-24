@@ -1,17 +1,18 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { hero, skills } from "~/content";
 
 export default component$(() => {
 	return (
 		<>
 			<div class="min-h-[100dvh] py-8 relative flex justify-center flex-col max-w-5xl mx-auto gap-4 snap-center">
 				<div class="flex flex-col gap-4 px-4 relative xl:bottom-0 bottom-10">
-					<h3 class="text-5xl">Hello! My Name's</h3>
-					<h1 class="text-8xl xl:text-[12rem] font-bold leading-none">Ahmed</h1>
+					<h3 class="text-5xl text-zinc-400">{hero.beforeName}</h3>
+					<h1 class="text-8xl xl:text-[12rem] font-bold leading-none">
+						{hero.name}
+					</h1>
 					<p class="relative xl:bottom-10 max-w-lg text-lg">
-						I'm a software engineer working primarily on
-						<span class="font-bold text-xl"> web technologies</span>. I'm
-						passionate about exploring new technologies and building cool stuff.
+						{hero.description}
 					</p>
 				</div>
 
@@ -55,19 +56,76 @@ export default component$(() => {
 					</svg>
 				</div>
 
-				<div class="absolute cursor-pointer z-10 w-full gap-6 bottom-8 flex items-center flex-col mx-auto px-2">
-					<div class="grid grid-cols-3 gap-4">
-						<a href="#" class="underline cursor-pointer">
-							Contact
-						</a>
+				<div class="absolute z-10 w-full gap-6 bottom-8 flex items-center flex-col mx-auto px-2 font-bold text-zinc-400">
+					<div class="grid grid-cols-3 gap-4 text-lg">
+						<div
+							class="cursor-crosshair flex items-center justify-center gap-2 hover:text-zinc-100 transition-colors duration-300"
+							onClick$={(e) => {
+								e.preventDefault();
+								const skillsElement = document.getElementById("skills");
+								if (!skillsElement) return;
+								skillsElement.scrollIntoView({ behavior: "smooth" });
+							}}
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="1.3rem"
+								height="1.3rem"
+								viewBox="0 0 24 24"
+							>
+								<path
+									fill="currentColor"
+									d="M20 2a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5v13a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V9H3.5a1 1 0 0 1-1-1V5.618a1 1 0 0 1 .553-.894L8.5 2zm-5 2H8.972L4.5 6.236V7H11v14h2V7h2zm4 0h-2v3h2z"
+								></path>
+							</svg>
+							Skills
+						</div>
 
-						<a href="#" class="underline cursor-pointer">
+						<div
+							class="cursor-crosshair justify-center flex items-center gap-2 hover:text-zinc-100 transition-colors duration-300"
+							onClick$={(e) => {
+								e.preventDefault();
+								const skillsElement = document.getElementById("projects");
+								if (!skillsElement) return;
+								skillsElement.scrollIntoView({ behavior: "smooth" });
+							}}
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="1.3rem"
+								height="1.3rem"
+								viewBox="0 0 24 24"
+							>
+								<path
+									fill="currentColor"
+									d="M4 5v14h9v2H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v5h-2V5zm15.707 6.293L19 10.586l-.707.707l-3 3l1.414 1.414L19 13.414l2.293 2.293l1.414-1.414zm-3 6L19 19.586l2.293-2.293l1.414 1.414l-3 3l-.707.707l-.707-.707l-3-3z"
+								></path>
+							</svg>
 							Projects
-						</a>
+						</div>
 
-						<a href="#" class="underline cursor-pointer">
-							About
-						</a>
+						<div
+							class="cursor-crosshair justify-center flex items-center gap-2 hover:text-zinc-100 transition-colors duration-300"
+							onClick$={(e) => {
+								e.preventDefault();
+								const skillsElement = document.getElementById("contact");
+								if (!skillsElement) return;
+								skillsElement.scrollIntoView({ behavior: "smooth" });
+							}}
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="1.3rem"
+								height="1.3rem"
+								viewBox="0 0 24 24"
+							>
+								<path
+									fill="currentColor"
+									d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1zm-.692-2H20V5H4v13.385zM11 10h2v2h-2zm-4 0h2v2H7zm8 0h2v2h-2z"
+								></path>
+							</svg>
+							Contact
+						</div>
 					</div>
 
 					<svg
@@ -85,26 +143,38 @@ export default component$(() => {
 				</div>
 			</div>
 
-			<div class="min-h-[100dvh] relative flex flex-col justify-center max-w-5xl mx-auto gap-4 py-8">
-				<h1 class="text-center text-8xl font-bold leading-none">I work with</h1>
+			<div
+				class="min-h-[100dvh] relative flex flex-col justify-center max-w-5xl mx-auto gap-4 py-8"
+				id="skills"
+			>
+				<div class="flex flex-col items-center">
+					<h1 class="text-center text-7xl md:text-8xl font-bold leading-none">
+						I use
+					</h1>
+
+					<p class="text-lg text-zinc-400">
+						the following technologies and tools
+					</p>
+				</div>
 
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-20 animate-updown">
-					<div class="flex flex-col items-center -skew-x-6 skew-y-2">
-						<h2 class="text-5xl">Frameworks</h2>
-						<p class="text-lg">React, Vue, Nuxt, Next, Laravel, Express</p>
-					</div>
-					<div class="flex flex-col items-center -skew-x-6 -skew-y-2">
-						<h2 class="text-5xl">Languages</h2>
-						<p class="text-lg">Typescrip, PHP, Go, Python</p>
-					</div>
-					<div class="flex flex-col items-center -skew-x-6 skew-y-2">
-						<h2 class="text-5xl">Data</h2>
-						<p class="text-lg">PostgreSQL, Prisma MySQL, SQLite</p>
-					</div>
-					<div class="flex flex-col items-center -skew-x-6 -skew-y-2">
-						<h2 class="text-5xl">DevOps</h2>
-						<p class="text-lg">Docker, Cloudflare, GitHub Actions, Netlify</p>
-					</div>
+					{skills.map((skill, i) => (
+						<div
+							key={skill.title}
+							class="flex flex-col items-center group"
+							style={{
+								transform:
+									i % 2 === 0
+										? "skewX(-6deg) skewY(2deg)"
+										: "skewX(6deg) skewY(-2deg)",
+							}}
+						>
+							<h2 class="text-5xl transition-transform duration-500">
+								{skill.title}
+							</h2>
+							<p class="text-lg">{skill.description}</p>
+						</div>
+					))}
 				</div>
 
 				<div class="absolute -z-10 bottom-0 w-full px-8">
@@ -138,11 +208,130 @@ export default component$(() => {
 					</svg>
 				</div>
 
-				<hr class="absolute -z-10 h-1 border-0 bg-zinc-600 rounded-full bottom-0 w-full" />
+				<div class="bg-amber-100 h-2 w-full rounded-full absolute bottom-0"></div>
 			</div>
 
-			<div class="h-[100dvh] relative flex flex-col justify-center max-w-5xl mx-auto gap-4 py-8">
-				<h1>HEllo</h1>
+			<div
+				class="h-[100dvh] relative flex flex-col justify-center max-w-5xl mx-auto gap-4 py-8"
+				id="projects"
+			>
+				<div class="flex flex-col items-center">
+					<h1 class="text-center text-7xl md:text-8xl font-bold leading-none">
+						I work
+					</h1>
+
+					<p class="text-lg text-zinc-400">on the following projects</p>
+				</div>
+
+				<div class="w-full overflow-x-scroll flex snap-x snap-mandatory p-4 gap-8">
+					<div class="w-2/3 shrink-0"></div>
+
+					{[
+						{
+							link: "pygmalion.chat",
+							title: "PygmalionAI",
+							description:
+								"Open-source AI project for chat, role-play, adventure, and more. Working on the backend using go but mainly on the frontend using React/NextJS.",
+						},
+						{
+							link: "www.sulysoft.com",
+							title: "SulySoft",
+							description:
+								"Software development company that provides custom software solutions. Working fullstack on projects using Laravel, NuxtJS, Vue, and React.",
+						},
+						{
+							link: "github.com/ahme-dev",
+							title: "OSS Projects",
+							description:
+								"Various small app and utilities that I've created. Working with languages and frameworks such as Go, Python, C#, and C, NextJS, React, and Vue.",
+						},
+					].map((el) => {
+						return (
+							<div
+								key={el.title}
+								class="w-4/5 md:w-2/3 snap-center snap-always border-b-4 border-zinc-600 p-4 py-8 shrink-0 transition-colors duration-300 hover:border-amber-100"
+							>
+								<div class="flex flex-col gap-2">
+									<a
+										href={`https://${el.link}`}
+										target="_blank"
+										class="text-zinc-400 cursor-crosshair hover:text-zinc-50 duration-300"
+									>
+										{el.link}
+									</a>
+									<h4 class="text-3xl font-bold">{el.title}</h4>
+									<p>{el.description}</p>
+								</div>
+							</div>
+						);
+					})}
+
+					<div class="w-2/3 shrink-0"></div>
+				</div>
+			</div>
+
+			<div
+				class="min-h-[100dvh] relative flex flex-col justify-center max-w-5xl mx-auto gap-4 py-8"
+				id="contact"
+			>
+				<div class="flex flex-col items-center">
+					<h1 class="text-center text-7xl md:text-8xl font-bold leading-none">
+						Contact me
+					</h1>
+
+					<p class="text-lg text-zinc-400">through the following platforms</p>
+				</div>
+
+				<div class="justify-center flex gap-4 text-xl bg-zinc-800 w-fit mx-auto px-3 py-1 rounded-full">
+					<a
+						href="https://t.me/ahmedkabd"
+						target="_blank"
+						class="flex items-center gap-2 cursor-crosshair text-zinc-400 hover:text-zinc-100 transition-colors duration-300"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="1.4rem"
+							height="1.4rem"
+							viewBox="0 0 24 24"
+						>
+							<path
+								fill="currentColor"
+								d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19c-.14.75-.42 1-.68 1.03c-.58.05-1.02-.38-1.58-.75c-.88-.58-1.38-.94-2.23-1.5c-.99-.65-.35-1.01.22-1.59c.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02c-.09.02-1.49.95-4.22 2.79c-.4.27-.76.41-1.08.4c-.36-.01-1.04-.2-1.55-.37c-.63-.2-1.12-.31-1.08-.66c.02-.18.27-.36.74-.55c2.92-1.27 4.86-2.11 5.83-2.51c2.78-1.16 3.35-1.36 3.73-1.36c.08 0 .27.02.39.12c.1.08.13.19.14.27c-.01.06.01.24 0 .38"
+							></path>
+						</svg>
+
+						<b class="leading-none">Telegram</b>
+					</a>
+					<a
+						href="mailto:mail@ahme.dev"
+						target="_blank"
+						class="flex items-center gap-2 cursor-crosshair text-zinc-400 hover:text-zinc-100 transition-colors duration-300"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="1.4rem"
+							height="1.4rem"
+							viewBox="0 0 24 24"
+						>
+							<path
+								fill="currentColor"
+								d="M22 4H2v16h20zm-2 4l-8 5l-8-5V6l8 5l8-5z"
+							></path>
+						</svg>
+
+						<b class="leading-none">Email</b>
+					</a>
+				</div>
+
+				<div class="left-20 bg-gradient-to-l from-zinc-600 to-zinc-400 h-2 w-full rounded-full -rotate-45 absolute -z-10"></div>
+				<div class="bg-gradient-to-l from-zinc-600 to-amber-100 h-2 w-full rounded-full -rotate-45 absolute -z-10"></div>
+				<div class="right-20 bg-gradient-to-l from-zinc-600 to-zinc-400 h-2 w-full rounded-full -rotate-45 absolute -z-10"></div>
+			</div>
+
+			<div class="relative flex flex-col justify-center max-w-5xl mx-auto gap-4 py-8">
+				<div class="flex justify-center">
+					{new Date().getFullYear()} © Ahmed
+				</div>
 			</div>
 		</>
 	);

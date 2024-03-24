@@ -16,7 +16,7 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 export default component$(() => {
 	return (
 		<>
-			<main class="scroll-smooth animate-fadeIn w-screen overflow-hidden">
+			<main class="animate-fadeIn w-screen overflow-hidden cursor-crosshair max-w-full">
 				<div class="bg-pattern" />
 
 				<Slot />
