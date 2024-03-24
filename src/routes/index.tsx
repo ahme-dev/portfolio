@@ -259,7 +259,7 @@ export default component$(() => {
 									>
 										{el.link}
 									</a>
-									<h4 class="text-3xl font-bold">{el.title}</h4>
+									<h2 class="text-3xl font-bold">{el.title}</h2>
 									<p>{el.description}</p>
 								</div>
 							</div>
