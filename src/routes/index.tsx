@@ -16,7 +16,7 @@ export default component$(() => {
 					</p>
 				</div>
 
-				<div class="absolute pointer-events-none opacity-70 xl:opacity-100 -right-44 xl:right-16 -z-10 top-1/4 animate-scaleUp">
+				<div class="absolute pointer-events-none opacity-40 xl:opacity-100 -right-44 xl:right-16 -z-10 top-1/4 animate-scaleUp">
 					<svg
 						width="300"
 						height="300"
@@ -144,7 +144,7 @@ export default component$(() => {
 			</div>
 
 			<div
-				class="min-h-[100dvh] relative flex flex-col justify-center max-w-5xl mx-auto gap-4 py-8"
+				class="min-h-[100dvh] relative flex flex-col justify-center max-w-5xl mx-auto gap-4 py-24 md:py-8"
 				id="skills"
 			>
 				<div class="flex flex-col items-center">
@@ -212,7 +212,7 @@ export default component$(() => {
 			</div>
 
 			<div
-				class="h-[100dvh] relative flex flex-col justify-center max-w-5xl mx-auto gap-4 py-8"
+				class="min-h-[100dvh] relative flex flex-col justify-center max-w-5xl mx-auto gap-4 py-24 md:py-8"
 				id="projects"
 			>
 				<div class="flex flex-col items-center">
@@ -223,8 +223,8 @@ export default component$(() => {
 					<p class="text-lg text-zinc-400">on the following projects</p>
 				</div>
 
-				<div class="w-full overflow-x-scroll flex snap-x snap-mandatory p-4 gap-8">
-					<div class="w-2/3 shrink-0"></div>
+				<div class="w-full md:overflow-x-scroll flex snap-x snap-mandatory p-4 gap-8 flex-col md:flex-row h-full md:h-auto">
+					<div class="hidden md:block w-2/3 shrink-0"></div>
 
 					{[
 						{
@@ -249,7 +249,7 @@ export default component$(() => {
 						return (
 							<div
 								key={el.title}
-								class="w-4/5 md:w-2/3 snap-center snap-always border-b-4 border-zinc-600 p-4 py-8 shrink-0 transition-colors duration-300 hover:border-amber-100"
+								class="w-full md:w-2/3 snap-center snap-always border-b-4 border-zinc-600 p-4 md:py-8 shrink-0 transition-colors duration-300 hover:border-amber-100 focus:border-amber-100"
 							>
 								<div class="flex flex-col gap-2">
 									<a
