@@ -1,5 +1,5 @@
 export const hero = {
-	beforeName: "Hello! My name's",
+	beforeName: "Hello! My name is",
 	name: "Ahmed",
 	description:
 		"I'm a software engineer working primarily on web technologies. I'm passionate about exploring new technologies and building cool stuff.",
@@ -12,7 +12,7 @@ export const skills = [
 	},
 	{
 		title: "Languages",
-		description: "Typescript, PHP, Go, Python",
+		description: "TypeScript, PHP, Go, Python",
 	},
 	{
 		title: "Data",

@@ -34,7 +34,7 @@ export default component$(() => {
 
 	return (
 		<>
-			<main class="animate-fadeIn w-screen overflow-hidden cursor-crosshair max-w-full">
+			<main class="animate-fadeIn w-screen overflow-hidden cursor-crosshair max-w-full select-none">
 				<div
 					class="bg-pattern"
 					id="bg-pattern-1"

@@ -330,7 +330,7 @@ export default component$(() => {
 
 			<div class="relative flex flex-col justify-center max-w-5xl mx-auto gap-4 py-8">
 				<div class="flex justify-center">
-					{new Date().getFullYear()} © Ahmed
+					© {new Date().getFullYear()} - Ahmed
 				</div>
 			</div>
 		</>
