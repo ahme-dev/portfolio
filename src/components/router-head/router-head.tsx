@@ -10,7 +10,8 @@ export const RouterHead = component$(() => {
 
 	return (
 		<>
-			<title>{head.title}</title>
+			<title>Ahme.Dev</title>
+			<description>The personal website of Ahmed</description>
 
 			<link rel="canonical" href={loc.url.href} />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
