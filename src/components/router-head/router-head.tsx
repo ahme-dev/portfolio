@@ -11,7 +11,7 @@ export const RouterHead = component$(() => {
 	return (
 		<>
 			<title>Ahme.Dev</title>
-			<description>The personal website of Ahmed</description>
+			<meta name="description" content="The personal website of Ahmed" />
 
 			<link rel="canonical" href={loc.url.href} />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
