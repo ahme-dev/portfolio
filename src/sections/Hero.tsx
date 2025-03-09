@@ -63,7 +63,7 @@ export function Hero() {
 
 	return (
 		<section class="relative">
-			<img src={assetStar} alt="" class="absolute -top-[40rem]" />
+			<img src={assetStar} alt="" class="-top-[40rem] absolute" />
 
 			{/* <div
 				ref={welcomeRef}
@@ -72,25 +72,25 @@ export function Hero() {
 				<p>Hello and welcome</p>
 			</div> */}
 
-			<div ref={sectionRef} class="max-w-8xl mx-auto">
-				<div class="font-koulen uppercase flex items-center flex-wrap gap-4">
+			<div ref={sectionRef} class="mx-auto max-w-8xl">
+				<div class="flex flex-wrap items-center gap-4 font-koulen uppercase">
 					<h1 class="text-extra-large leading-none">Ahmed</h1>
 				</div>
 
-				<p class="text-small relative mx-auto text-center -top-16">
+				<p class="-top-16 relative mx-auto text-center text-small">
 					I'm a software engineer working primarily on web technologies. I'm
 					passionate about exploring new technologies and building cool stuff.
 				</p>
 
-				<div class="flex items-center flex-wrap justify-between gap-8 w-full">
+				<div class="flex w-full flex-wrap items-center justify-between gap-8">
 					<div class="flex flex-col gap-2">
 						<p class="text-small">I currently work as a</p>
 						<div class="flex flex-wrap items-center gap-4">
-							<p class="text-medium font-koulen leading-none uppercase">
+							<p class="font-koulen text-medium uppercase leading-none">
 								Software <br /> Engineer
 							</p>
 							<IconCode size={59} />
-							<p class="text-medium font-koulen leading-none uppercase">
+							<p class="font-koulen text-medium uppercase leading-none">
 								Web <br /> Developer
 							</p>
 						</div>
@@ -98,8 +98,8 @@ export function Hero() {
 
 					<div class="flex flex-col gap-2">
 						<p class="text-small">Contact Me</p>
-						<p class="text-medium font-koulen leading-none uppercase">
-							<IconMail class="inline mb-2 mr-2" size={59} />
+						<p class="font-koulen text-medium uppercase leading-none">
+							<IconMail class="mr-2 mb-2 inline" size={59} />
 							work@
 							<br />
 							ahme.dev
