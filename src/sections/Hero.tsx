@@ -8,8 +8,8 @@ import assetStar from "../assets/star.png";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export function Hero() {
-	let sectionRef: HTMLDivElement;
-	let welcomeRef: HTMLDivElement;
+	let sectionRef!: HTMLDivElement;
+	let welcomeRef!: HTMLDivElement;
 
 	onMount(() => {
 		if (sectionRef) {
