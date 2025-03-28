@@ -120,7 +120,7 @@ export function Skills() {
 					id="skills-title"
 					class="z-10 flex flex-col gap-8 font-koulen uppercase xl:gap-12"
 				>
-					<h2 class="order-2 text-blood text-large leading-[0.8] sm:text-larger">
+					<h2 class="order-2 text-large text-pr leading-[0.8] sm:text-larger">
 						SKI
 						<br class="hidden md:block" />
 						LLS
@@ -141,7 +141,7 @@ export function Skills() {
 					<For each={skills}>
 						{(skill) => (
 							<p class="list w-full overflow-x-auto overflow-y-hidden pb-2 xl:w-auto xl:overflow-visible">
-								<span class="font-koulen text-blood">{skill.title} </span>
+								<span class="font-koulen text-pr">{skill.title} </span>
 								{skill.skills.join(", ")}
 							</p>
 						)}

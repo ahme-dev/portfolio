@@ -86,7 +86,7 @@ export function Connect() {
 					ref={titleRef}
 					class="flex flex-col items-center gap-12 font-koulen"
 				>
-					<h2 class="break-all text-center text-blood text-large uppercase leading-[0.8] sm:text-larger">
+					<h2 class="break-all text-center text-large text-pr uppercase leading-[0.8] sm:text-larger">
 						Connect
 					</h2>
 					<h3 class="text-center text-large uppercase leading-none shadow-dance">

@@ -147,7 +147,7 @@ export function Experiences() {
 				class="mx-auto flex w-full max-w-8xl flex-col items-end justify-between gap-12 xl:flex-row-reverse xl:items-center"
 			>
 				<div ref={titleRef} class="flex flex-col gap-12 font-koulen uppercase">
-					<h2 class="break-all text-right text-blood text-large leading-[0.8] sm:text-larger">
+					<h2 class="break-all text-right text-large text-pr leading-[0.8] sm:text-larger">
 						Comp
 						<br class="hidden md:block" />
 						anies
@@ -166,7 +166,7 @@ export function Experiences() {
 					class="flex w-full max-w-4xl flex-col items-end gap-16 font-imbue"
 				>
 					<div class="relative flex w-full items-center gap-2">
-						<div class="flex w-full flex-row-reverse gap-12 overflow-x-auto overflow-y-clip font-koulen text-blood [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>*]:shrink-0">
+						<div class="flex w-full flex-row-reverse gap-12 overflow-x-auto overflow-y-clip font-koulen text-pr [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>*]:shrink-0">
 							<For each={experiences}>
 								{(exp) => (
 									<button
@@ -198,7 +198,7 @@ export function Experiences() {
 							href={selectedExperience()?.link}
 							target="_blank"
 							aria-label={`Visit ${selectedExperience()?.company}`}
-							class="inline-block text-blood"
+							class="inline-block text-pr"
 						>
 							<IconLink size={39} />
 						</a>

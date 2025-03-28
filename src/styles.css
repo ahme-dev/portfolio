@@ -27,9 +27,9 @@
 		sans-serif;
 	--font-koulen: "Koulen", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
-	--color-blood: #ff3535;
-	--color-white: #fdf7d6;
-	--color-black: #1b1b1b;
+	--color-pr: #ff3535;
+	--color-fg: #1b1b1b;
+	--color-bg: #fdf7d6;
 
 	--text-extra-small: 24px;
 	--text-small: 36px;
@@ -39,6 +39,13 @@
 	--text-extra-large: 580px;
 
 	--spacing-8xl: 1650px;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-fg: #fdf7d6;
+		--color-bg: #1b1b1b;
+	}
 }
 
 *,
@@ -55,8 +62,7 @@ body {
 	margin: 0;
 	padding: 0;
 
-	@apply text-black bg-white;
-	@apply dark:text-white dark:bg-black;
+	@apply text-fg bg-bg;
 	@apply font-imbue select-none;
 
 	min-height: 100vh;
@@ -66,8 +72,8 @@ body {
 }
 
 .shadow-dance {
-	-webkit-text-stroke: 2px var(--color-white);
-	background-image: linear-gradient(transparent 50%, var(--color-white) 50%);
+	-webkit-text-stroke: 2px var(--color-fg);
+	background-image: linear-gradient(transparent 50%, var(--color-fg) 50%);
 	background-size: 100% 200%;
 	background-position: center;
 	-webkit-background-clip: text;
