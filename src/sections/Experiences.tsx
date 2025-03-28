@@ -197,6 +197,7 @@ export function Experiences() {
 						<a
 							href={selectedExperience()?.link}
 							target="_blank"
+							aria-label={`Visit ${selectedExperience()?.company}`}
 							class="inline-block text-blood"
 						>
 							<IconLink size={39} />
