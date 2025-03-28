@@ -27,9 +27,15 @@
 		sans-serif;
 	--font-koulen: "Koulen", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
+	--color-blood: #ff3535;
+	--color-fg: #fdf7d6;
+	--color-bg: #1b1b1b;
+
 	--text-small: 36px;
 	--text-medium: 64px;
 	--text-large: 120px;
+	--text-larger: 290px;
+	--text-extra-large: 580px;
 	--text-extra-large: 580px;
 
 	--spacing-8xl: 1650px;
@@ -39,20 +45,31 @@
 *::before,
 *::after {
 	box-sizing: border-box;
-	color: inherit;
 	overflow-wrap: inherit;
 }
 
 body {
-	background-color: #1b1b1b;
-	color: #fdf7d6;
 	overflow-wrap: break-word;
 
-	@apply bg-[url('/bg.svg')] bg-repeat;
+	@apply text-fg bg-bg;
 	@apply font-imbue;
 
 	min-height: 100vh;
 	width: 100vw;
 	overflow-y: auto;
 	overflow-x: hidden;
+}
+
+@keyframes fading {
+	0%,
+	100% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 0.4;
+	}
+}
+
+.animate-fading {
+	animation: fading 5s ease-in-out infinite;
 }

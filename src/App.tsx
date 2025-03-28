@@ -1,19 +1,107 @@
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import { onMount } from "solid-js";
+import assetBG from "./assets/bg.png";
+import assetStar from "./assets/star.png";
+import assetSymbol from "./assets/symbol.png";
+import { Experiences } from "./sections/Experiences";
 import { Hero } from "./sections/Hero";
+import { Skills } from "./sections/Skills";
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 function App() {
+	let starRef!: HTMLImageElement;
+	let bgRef!: HTMLDivElement;
+
 	onMount(() => {
 		new Lenis({
 			autoRaf: true,
 		});
+
+		if (starRef) {
+			gsap.fromTo(
+				starRef,
+				{
+					opacity: 0,
+					y: -50,
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 4,
+					stagger: 0.2,
+					ease: "power2.inOut",
+				},
+			);
+		}
+
+		if (bgRef) {
+			gsap.fromTo(
+				bgRef,
+				{
+					opacity: 0,
+				},
+				{
+					opacity: 1,
+					duration: 4,
+					stagger: 0.2,
+					ease: "power2.inOut",
+					onComplete: () => {
+						gsap.to(bgRef, {
+							opacity: 0.3,
+							duration: 3,
+							repeat: -1,
+							yoyo: true,
+							ease: "sine.inOut",
+						});
+					},
+				},
+			);
+		}
 	});
 
 	return (
-		<main>
-			<Hero />
+		<main class="relative overflow-hidden">
+			<div
+				ref={bgRef}
+				class="absolute inset-0 z-0 h-full w-full bg-cover bg-repeat"
+				style={{
+					"background-image": `url(${assetBG})`,
+				}}
+			/>
 
-			<div class="my-24" />
+			<div class="relative mx-auto max-w-8xl">
+				<img
+					ref={starRef}
+					src={assetStar}
+					alt=""
+					class="-top-[40rem] absolute"
+				/>
+				<Hero />
+			</div>
+
+			<div class="my-72" />
+
+			<div class="relative">
+				<img
+					src={assetSymbol}
+					alt=""
+					class="absolute top-2 right-0 max-w-8xl"
+				/>
+				<Skills />
+			</div>
+
+			<div class="my-72" />
+
+			<Experiences />
+
+			<div class="my-72" />
+
+			<Skills />
+			<Skills />
 		</main>
 	);
 }
