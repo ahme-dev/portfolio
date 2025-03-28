@@ -58,8 +58,10 @@ body {
 	overflow-wrap: break-word;
 	margin: 0;
 	padding: 0;
+
 	@apply text-fg bg-bg;
 	@apply font-imbue select-none;
+
 	min-height: 100vh;
 	width: 100vw;
 	overflow-y: auto;
@@ -67,45 +69,19 @@ body {
 }
 
 .shadow-dance {
-	position: relative;
-	display: inline-block;
 	-webkit-text-stroke: 2px var(--color-fg);
-	color: transparent;
-	transition: transform 0.3s ease;
+	background-image: linear-gradient(transparent 50%, var(--color-fg) 50%);
+	background-size: 100% 200%;
+	background-position: center;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: background-position 1s ease-in-out;
 }
 
-.shadow-dance::before,
-.shadow-dance::after {
-	content: attr(data-text);
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	transition: transform 0.3s ease;
-}
-
-.shadow-dance::before {
-	-webkit-text-stroke: 0;
-	color: var(--color-fg);
-	transform: translateY(0);
-}
-
-.shadow-dance::after {
-	-webkit-text-stroke: 0;
-	color: var(--color-fg);
-	opacity: 0;
-	transform: translateY(50%);
-}
-
-.shadow-dance:hover::before {
-	transform: translateY(-50%);
-	opacity: 0;
-}
-
-.shadow-dance:hover::after {
-	transform: translateY(0);
-	opacity: 1;
+.shadow-dance:hover {
+	background-position: bottom;
+	transition: background-position 1s ease-in-out;
 }
 
 @keyframes fadeIn {
