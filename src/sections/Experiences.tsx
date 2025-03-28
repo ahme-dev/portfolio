@@ -1,9 +1,6 @@
 import { IconChevronDown, IconLink } from "@tabler/icons-solidjs";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { For, Show, createMemo, createSignal, onMount } from "solid-js";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
 	{
