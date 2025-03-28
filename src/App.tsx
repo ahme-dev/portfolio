@@ -2,8 +2,8 @@ import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
-import { createSignal, onMount } from "solid-js";
-import assetBG from "./assets/bg.png";
+import { onMount } from "solid-js";
+import assetBG from "./assets/bgSm.png";
 import assetStar from "./assets/star.png";
 import assetSymbol from "./assets/symbol.png";
 import { Cursor } from "./components/Cursor";
@@ -17,7 +17,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 function App() {
 	let starRef!: HTMLImageElement;
-	const [isImageLoaded, setIsImageLoaded] = createSignal(false);
 
 	onMount(() => {
 		new Lenis({
@@ -40,10 +39,6 @@ function App() {
 				},
 			);
 		}
-
-		const img = new Image();
-		img.src = assetBG;
-		img.onload = () => setIsImageLoaded(true);
 	});
 
 	return (
@@ -51,16 +46,15 @@ function App() {
 			<Cursor />
 
 			<div
-				class="fixed inset-0 z-0 h-full w-full animate-fade-in"
+				class="fixed z-0 h-full w-full animate-fade-in"
+				id="bg-image"
 				style={{
-					"background-color": "var(--color-bg)",
-					"background-image": isImageLoaded() ? `url(${assetBG})` : "none",
-					"background-size": "1200px",
+					"background-image": `url(${assetBG})`,
+					"background-size": "800px",
 					"background-position": "center",
 					"will-change": "transform",
-					transform: "translate3d(0, 0, 0)",
 					"backface-visibility": "hidden",
-					perspective: "1000px",
+					"background-attachment": "local",
 				}}
 			/>
 
