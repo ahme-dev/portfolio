@@ -10,16 +10,19 @@ const links = [
 	{
 		icon: IconBrandGithub,
 		href: "https://github.com/ahme-dev",
+		text: "Github",
 		label: "Github",
 	},
 	{
 		icon: IconMail,
 		href: "mailto:work@ahme.dev",
+		text: "Email",
 		label: "Email",
 	},
 	{
 		icon: IconBrandTelegram,
 		href: "https://t.me/ahmedkabd",
+		text: "Telegram",
 		label: "Telegram",
 	},
 ];
@@ -104,6 +107,7 @@ export function Connect() {
 								href={link.href}
 								target="_blank"
 								class="flex items-center gap-4 transition-colors"
+								aria-label={link.text}
 							>
 								<link.icon size={39} />
 								{link.label}

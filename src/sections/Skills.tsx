@@ -120,15 +120,15 @@ export function Skills() {
 					id="skills-title"
 					class="z-10 flex flex-col gap-8 font-koulen uppercase xl:gap-12"
 				>
-					<h3 class="z-20 text-medium leading-none shadow-dance sm:text-large">
-						I HAVE SOME
-					</h3>
-					<h2 class="text-blood text-large leading-[0.8] sm:text-larger">
+					<h2 class="order-2 text-blood text-large leading-[0.8] sm:text-larger">
 						SKI
 						<br class="hidden md:block" />
 						LLS
 					</h2>
-					<p class="max-w-lg text-left font-imbue text-small leading-none">
+					<h3 class="z-20 order-1 text-medium leading-none shadow-dance sm:text-large">
+						I HAVE SOME
+					</h3>
+					<p class="order-3 max-w-lg text-left font-imbue text-small leading-none">
 						Refined through professional experience across diverse projects
 					</p>
 				</div>
