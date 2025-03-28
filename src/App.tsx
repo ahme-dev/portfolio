@@ -11,12 +11,12 @@ import { Connect } from "./sections/Connect";
 import { Experiences } from "./sections/Experiences";
 import { Hero } from "./sections/Hero";
 import { Skills } from "./sections/Skills";
+import "./styles.css";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 function App() {
 	let starRef!: HTMLImageElement;
-	let bgRef!: HTMLDivElement;
 
 	onMount(() => {
 		new Lenis({
@@ -39,30 +39,6 @@ function App() {
 				},
 			);
 		}
-
-		if (bgRef) {
-			gsap.fromTo(
-				bgRef,
-				{
-					opacity: 0,
-				},
-				{
-					opacity: 0.7,
-					duration: 2,
-					stagger: 0.2,
-					ease: "power2.inOut",
-					onComplete: () => {
-						gsap.to(bgRef, {
-							opacity: 0.3,
-							duration: 1,
-							repeat: -1,
-							yoyo: true,
-							ease: "sine.inOut",
-						});
-					},
-				},
-			);
-		}
 	});
 
 	return (
@@ -70,13 +46,14 @@ function App() {
 			<Cursor />
 
 			<div
-				ref={bgRef}
-				class="absolute inset-0 z-0 h-full w-full bg-cover bg-repeat"
+				class="fixed z-0 h-full w-full animate-fade-in"
 				style={{
 					"background-image": `url(${assetBG})`,
-					"will-change": "auto",
-					transform: "translateZ(0)",
+					"background-size": "1500px",
+					"background-position": "center",
+					"will-change": "transform",
 					"backface-visibility": "hidden",
+					"background-attachment": "local",
 				}}
 			/>
 

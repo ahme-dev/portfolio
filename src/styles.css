@@ -5,8 +5,7 @@
 	font-style: normal;
 	font-display: swap;
 	font-weight: 100 900;
-	src: url(https://cdn.jsdelivr.net/fontsource/fonts/imbue:vf@latest/latin-wght-normal.woff2)
-		format("woff2-variations");
+	src: url(https://cdn.jsdelivr.net/fontsource/fonts/imbue:vf@latest/latin-wght-normal.woff2) format("woff2-variations");
 	unicode-range:
 		U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
@@ -16,8 +15,7 @@
 	font-style: normal;
 	font-display: swap;
 	font-weight: 400;
-	src: url(https://cdn.jsdelivr.net/fontsource/fonts/koulen@latest/latin-400-normal.woff2)
-		format("woff2");
+	src: url(https://cdn.jsdelivr.net/fontsource/fonts/koulen@latest/latin-400-normal.woff2) format("woff2");
 	unicode-range:
 		U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
@@ -58,13 +56,10 @@
 
 body {
 	overflow-wrap: break-word;
-
 	margin: 0;
 	padding: 0;
-
 	@apply text-fg bg-bg;
 	@apply font-imbue select-none;
-
 	min-height: 100vh;
 	width: 100vw;
 	overflow-y: auto;
@@ -72,17 +67,73 @@ body {
 }
 
 .shadow-dance {
+	position: relative;
+	display: inline-block;
 	-webkit-text-stroke: 2px var(--color-fg);
-	background-image: linear-gradient(transparent 50%, var(--color-fg) 50%);
-	background-size: 100% 200%;
-	background-position: center;
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	transition: background-position 1s ease-in-out;
+	color: transparent;
+	transition: transform 0.3s ease;
 }
 
-.shadow-dance:hover {
-	background-position: bottom;
-	transition: background-position 1s ease-in-out;
+.shadow-dance::before,
+.shadow-dance::after {
+	content: attr(data-text);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.3s ease;
+}
+
+.shadow-dance::before {
+	-webkit-text-stroke: 0;
+	color: var(--color-fg);
+	transform: translateY(0);
+}
+
+.shadow-dance::after {
+	-webkit-text-stroke: 0;
+	color: var(--color-fg);
+	opacity: 0;
+	transform: translateY(50%);
+}
+
+.shadow-dance:hover::before {
+	transform: translateY(-50%);
+	opacity: 0;
+}
+
+.shadow-dance:hover::after {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0.7;
+	}
+
+	100% {
+		opacity: 0.3;
+	}
+}
+
+@keyframes pulse {
+
+	0%,
+	100% {
+		opacity: 0.3;
+	}
+
+	50% {
+		opacity: 0.7;
+	}
+}
+
+.animate-fade-in {
+	animation: fadeIn 2s ease-in-out forwards, pulse 2s ease-in-out infinite;
 }
