@@ -1,5 +1,34 @@
 import gsap from "gsap";
-import { onMount } from "solid-js";
+import { For, onMount } from "solid-js";
+
+const skills = [
+	{
+		title: "FRAMEWORKS",
+		skills: ["React", "Vue", "Nuxt", "Next", "Laravel", "AdonisJS", "Express"],
+	},
+	{
+		title: "LANGUAGES",
+		skills: ["TypeScript", "PHP", "Go", "Python"],
+	},
+	{
+		title: "INTEGRATIONS",
+		skills: ["Authorize NET", "Paypal"],
+	},
+	{
+		title: "DATABASES",
+		skills: ["PostgreSQL", "Prisma", "MySQL", "SQLite"],
+	},
+	{
+		title: "DEVOPS",
+		skills: [
+			"Docker",
+			"Cloudflare",
+			"Digital Ocean",
+			"GitHub Actions",
+			"Netlify",
+		],
+	},
+];
 
 export function Skills() {
 	let sectionRef!: HTMLDivElement;
@@ -42,14 +71,14 @@ export function Skills() {
 						opacity: 0,
 					},
 					{
-						x: 0,
+						x: -1 * direction * window.innerWidth * 0.1,
 						opacity: 1,
 						duration: 1.5,
 						ease: "power2.out",
 						scrollTrigger: {
 							trigger: sectionRef,
 							start: "top bottom",
-							end: "bottom center",
+							end: "bottom top",
 							scrub: 1,
 							invalidateOnRefresh: true,
 						},
@@ -57,74 +86,66 @@ export function Skills() {
 				);
 			});
 
-			const totalWidth =
-				skillsContainerRef.scrollWidth - skillsContainerRef.clientWidth;
+			if (window.innerWidth >= 1280) {
+				const totalWidth =
+					skillsContainerRef.scrollWidth - skillsContainerRef.clientWidth;
 
-			gsap.to(skillsContainerRef, {
-				x: () => {
-					const scrollPosition = window.scrollY - sectionRef.offsetTop;
-					const sectionHeight = sectionRef.offsetHeight - window.innerHeight;
+				gsap.to(skillsContainerRef, {
+					x: () => {
+						const scrollPosition = window.scrollY - sectionRef.offsetTop;
+						const sectionHeight = sectionRef.offsetHeight - window.innerHeight;
 
-					return -totalWidth * (scrollPosition / sectionHeight);
-				},
-				ease: "none",
-				scrollTrigger: {
-					trigger: sectionRef,
-					start: "bottom top",
-					end: "bottom center",
-					scrub: 0.5,
-					invalidateOnRefresh: true,
-				},
-			});
+						return -totalWidth * (scrollPosition / sectionHeight);
+					},
+					ease: "none",
+					scrollTrigger: {
+						trigger: sectionRef,
+						start: "bottom top",
+						end: "bottom center",
+						scrub: 0.5,
+						invalidateOnRefresh: true,
+					},
+				});
+			}
 		}
 	});
 
 	return (
-		<section class="relative">
+		<section class="relative min-h-screen py-20">
 			<div
 				ref={sectionRef}
-				class="relative mx-auto flex w-full max-w-8xl flex-col items-start justify-between gap-2 px-4"
+				class="relative mx-auto flex w-full max-w-8xl flex-col items-start justify-between gap-12 px-4 xl:flex-row"
 			>
 				<div
 					id="skills-title"
-					class="z-10 flex flex-col gap-12 font-koulen uppercase"
+					class="z-10 flex flex-col gap-8 font-koulen uppercase xl:gap-12"
 				>
-					<h3 class="text-large leading-none">I HAVE SOME</h3>
-					<h2 class="text-[15vw] text-blood leading-[0.8] md:text-larger ">
+					<h3 class="text-medium z-20 leading-none shadow-dance sm:text-large">
+						I HAVE SOME
+					</h3>
+					<h2 class="text-blood text-large leading-[0.8] sm:text-larger">
 						SKI
-						<br />
+						<br class="hidden md:block" />
 						LLS
 					</h2>
-					<p class="text-left font-imbue text-small leading-none">
-						Which I took some time to develop and hone, working on many projects
+					<p class="max-w-lg text-left font-imbue text-small leading-none">
+						Refined through professional experience across diverse projects
 					</p>
 				</div>
 
 				<div
 					id="skill-lists"
 					ref={skillsContainerRef}
-					class="absolute top-0 right-0 flex h-[100%] w-fit rotate-12 flex-col items-center justify-center gap-8 font-imbue [&>*]:whitespace-nowrap [&>*]:text-medium [&>*]:leading-none"
+					class="static flex w-full flex-col items-start gap-6 font-imbue xl:absolute xl:top-0 xl:right-0 xl:h-full xl:w-fit xl:rotate-12 xl:items-center xl:justify-center xl:gap-8 [&>*]:whitespace-nowrap [&>*]:text-small [&>*]:leading-none sm:[&>*]:text-medium"
 				>
-					<p class="list">
-						<span class="font-koulen text-blood"> WORKS </span>
-						React, Vue, Nuxt, Next, Laravel, AdonisJS, Express.
-					</p>
-					<p class="list">
-						<span class="font-koulen text-blood"> LANGUAGES </span>
-						TypeScript, PHP, Go, Python.
-					</p>
-					<p class="list">
-						<span class="font-koulen text-blood"> INTEGRATIONS </span>
-						Authorize NET.
-					</p>
-					<p class="list">
-						<span class="font-koulen text-blood"> DATA </span>
-						PostgreSQL, Prisma, MySQL, SQLite.
-					</p>
-					<p class="list">
-						<span class="font-koulen text-blood"> DEVOPS </span>
-						Docker, Cloudflare, Digital Ocean, GitHub Actions, Netlify.
-					</p>
+					<For each={skills}>
+						{(skill) => (
+							<p class="list w-full overflow-x-auto overflow-y-hidden pb-2 xl:w-auto xl:overflow-visible">
+								<span class="font-koulen text-blood">{skill.title} </span>
+								{skill.skills.join(", ")}
+							</p>
+						)}
+					</For>
 				</div>
 			</div>
 		</section>
