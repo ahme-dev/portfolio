@@ -3,7 +3,6 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import { onMount } from "solid-js";
-import assetBG from "./assets/bg.png";
 import assetStar from "./assets/star.png";
 import assetSymbol from "./assets/symbol.png";
 import { Cursor } from "./components/Cursor";
@@ -68,14 +67,6 @@ function App() {
 	return (
 		<main class="relative cursor-none overflow-hidden p-4">
 			<Cursor />
-
-			<div
-				ref={bgRef}
-				class="absolute inset-0 z-0 h-full w-full bg-cover bg-repeat"
-				style={{
-					"background-image": `url(${assetBG})`,
-				}}
-			/>
 
 			<div class="relative mx-auto max-w-8xl">
 				<img
