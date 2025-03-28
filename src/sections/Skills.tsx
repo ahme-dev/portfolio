@@ -125,7 +125,7 @@ export function Skills() {
 						<br class="hidden md:block" />
 						LLS
 					</h2>
-					<h3 class="z-20 order-1 text-medium leading-none shadow-dance sm:text-large">
+					<h3 class="z-20 order-1 text-large leading-none shadow-dance">
 						I HAVE SOME
 					</h3>
 					<p class="order-3 max-w-lg text-left font-imbue text-small leading-none">
