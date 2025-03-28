@@ -83,7 +83,7 @@ export function Connect() {
 					ref={titleRef}
 					class="flex flex-col items-center gap-12 font-koulen"
 				>
-					<h2 class="break-all text-center text-blood text-large sm:text-larger uppercase leading-[0.8]">
+					<h2 class="break-all text-center text-blood text-large uppercase leading-[0.8] sm:text-larger">
 						Connect
 					</h2>
 					<h3 class="text-center text-large uppercase leading-none shadow-dance">
@@ -96,7 +96,7 @@ export function Connect() {
 
 				<div
 					ref={platformsRef}
-					class="flex items-center gap-y-6 gap-x-12 flex-wrap justify-center font-imbue text-small sm:text-medium"
+					class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 font-imbue text-small sm:text-medium"
 				>
 					<For each={links}>
 						{(link) => (

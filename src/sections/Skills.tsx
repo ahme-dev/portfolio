@@ -120,7 +120,7 @@ export function Skills() {
 					id="skills-title"
 					class="z-10 flex flex-col gap-8 font-koulen uppercase xl:gap-12"
 				>
-					<h3 class="text-medium z-20 leading-none shadow-dance sm:text-large">
+					<h3 class="z-20 text-medium leading-none shadow-dance sm:text-large">
 						I HAVE SOME
 					</h3>
 					<h2 class="text-blood text-large leading-[0.8] sm:text-larger">
