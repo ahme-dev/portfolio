@@ -39,11 +39,11 @@ export function Cursor() {
 		<>
 			<div
 				ref={cursorRef}
-				class="pointer-events-none fixed top-0 left-0 z-50 size-20 rounded-full bg-white mix-blend-difference"
+				class="pointer-events-none fixed top-0 left-0 z-50 size-20 rounded-full bg-fg mix-blend-difference"
 			/>
 			<div
 				ref={dotRef}
-				class="pointer-events-none fixed top-0 left-0 z-50 size-6 rounded-full bg-white mix-blend-difference"
+				class="pointer-events-none fixed top-0 left-0 z-50 size-6 rounded-full bg-fg mix-blend-difference"
 			/>
 		</>
 	);

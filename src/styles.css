@@ -112,4 +112,7 @@ body {
 
 .animate-fade-in {
 	animation: fadeIn 2s ease-in-out forwards, pulse 2s ease-in-out infinite;
+	will-change: opacity;
+	transform: translateZ(0);
+	backface-visibility: hidden;
 }
