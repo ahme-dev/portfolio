@@ -120,14 +120,14 @@ export function Skills() {
 					id="skills-title"
 					class="z-10 flex flex-col gap-8 font-koulen uppercase xl:gap-12"
 				>
+					<h3 class="order-1 text-medium leading-none shadow-dance sm:text-large">
+						I HAVE SOME
+					</h3>
 					<h2 class="order-2 text-large text-pr leading-[0.8] sm:text-larger">
 						SKI
 						<br class="hidden md:block" />
 						LLS
 					</h2>
-					<h3 class="z-20 order-1 text-large leading-none shadow-dance">
-						I HAVE SOME
-					</h3>
 					<p class="order-3 max-w-lg text-left font-imbue text-small leading-none">
 						Refined through professional experience across diverse projects
 					</p>
@@ -136,11 +136,11 @@ export function Skills() {
 				<div
 					id="skill-lists"
 					ref={skillsContainerRef}
-					class="static flex w-full flex-col items-start gap-6 font-imbue xl:absolute xl:top-0 xl:right-0 xl:h-full xl:w-fit xl:rotate-12 xl:items-center xl:justify-center xl:gap-8 [&>*]:whitespace-nowrap [&>*]:text-small [&>*]:leading-none sm:[&>*]:text-medium"
+					class="static flex w-full rotate-12 flex-col items-start gap-6 font-imbue xl:absolute xl:top-0 xl:right-0 xl:h-full xl:w-fit xl:items-center xl:justify-center xl:gap-8 [&>*]:text-small [&>*]:leading-none sm:[&>*]:text-medium"
 				>
 					<For each={skills}>
 						{(skill) => (
-							<p class="list w-full overflow-x-auto overflow-y-hidden pb-2 xl:w-auto xl:overflow-visible">
+							<p class="list w-full overflow-x-auto overflow-y-hidden pb-2 xl:w-auto xl:overflow-visible xl:whitespace-nowrap">
 								<span class="font-koulen text-pr">{skill.title} </span>
 								{skill.skills.join(", ")}
 							</p>

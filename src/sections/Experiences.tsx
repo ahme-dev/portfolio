@@ -152,7 +152,7 @@ export function Experiences() {
 						<br class="hidden md:block" />
 						anies
 					</h2>
-					<h3 class="text-right text-large leading-none shadow-dance">
+					<h3 class="text-right text-medium leading-none shadow-dance sm:text-large">
 						I WORK WITH
 					</h3>
 					<p class="text-right font-imbue text-small leading-none">

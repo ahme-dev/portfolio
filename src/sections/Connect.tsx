@@ -87,9 +87,11 @@ export function Connect() {
 					class="flex flex-col items-center gap-12 font-koulen"
 				>
 					<h2 class="break-all text-center text-large text-pr uppercase leading-[0.8] sm:text-larger">
-						Connect
+						Con
+						<br class="block md:hidden" />
+						nect
 					</h2>
-					<h3 class="text-center text-large uppercase leading-none shadow-dance">
+					<h3 class="text-center text-medium uppercase leading-none shadow-dance sm:text-large">
 						WITH ME
 					</h3>
 					<p class="text-center font-imbue text-small leading-none">
