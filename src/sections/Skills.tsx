@@ -12,7 +12,7 @@ const skills = [
 	},
 	{
 		title: "INTEGRATIONS",
-		skills: ["Authorize NET", "Paypal"],
+		skills: ["Authorize NET", "PayPal"],
 	},
 	{
 		title: "DATABASES",
@@ -23,7 +23,7 @@ const skills = [
 		skills: [
 			"Docker",
 			"Cloudflare",
-			"Digital Ocean",
+			"DigitalOcean",
 			"GitHub Actions",
 			"Netlify",
 		],

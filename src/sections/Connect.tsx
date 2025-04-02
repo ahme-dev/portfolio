@@ -10,8 +10,8 @@ const links = [
 	{
 		icon: IconBrandGithub,
 		href: "https://github.com/ahme-dev",
-		text: "Github",
-		label: "Github",
+		text: "GitHub",
+		label: "GitHub",
 	},
 	{
 		icon: IconMail,
