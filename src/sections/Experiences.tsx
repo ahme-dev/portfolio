@@ -197,6 +197,7 @@ export function Experiences() {
 						<a
 							href={selectedExperience()?.link}
 							target="_blank"
+							rel="noopener noreferrer"
 							aria-label={`Visit ${selectedExperience()?.company}`}
 							class="inline-block text-pr"
 						>

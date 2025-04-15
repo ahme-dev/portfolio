@@ -108,6 +108,7 @@ export function Connect() {
 							<a
 								href={link.href}
 								target="_blank"
+								rel="noopener noreferrer"
 								class="flex items-center gap-4 transition-colors"
 								aria-label={link.text}
 							>

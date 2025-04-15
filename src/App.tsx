@@ -56,13 +56,14 @@ function App() {
 					"backface-visibility": "hidden",
 					"background-attachment": "local",
 				}}
+				aria-hidden="true"
 			/>
 
 			<div class="relative mx-auto max-w-8xl">
 				<img
 					ref={starRef}
 					src={assetStar}
-					alt=""
+					alt="Decorative star icon animation"
 					class="-top-12 xl:-top-[40rem] absolute"
 				/>
 				<Hero />
@@ -73,7 +74,7 @@ function App() {
 			<div class="relative">
 				<img
 					src={assetSymbol}
-					alt=""
+					alt="Decorative geometric symbol"
 					class="absolute top-2 right-0 max-w-8xl"
 				/>
 				<Skills />
