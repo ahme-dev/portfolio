@@ -31,7 +31,7 @@ export function Hero() {
 					</div>
 					<h1
 						data-text="Ahme"
-						class="break-all text-center text-large leading-[0.7] sm:text-extra-large xl:leading-none"
+						class="break-all animate-shadow-dance-initial text-center text-large leading-[0.7] sm:text-extra-large xl:leading-none"
 					>
 						Ahme
 					</h1>
