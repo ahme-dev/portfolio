@@ -11,7 +11,13 @@ import { Connect } from "./sections/Connect";
 import { Experiences } from "./sections/Experiences";
 import { Hero } from "./sections/Hero";
 import { Skills } from "./sections/Skills";
+
 import "./styles.css";
+
+// @ts-ignore
+import "@fontsource-variable/imbue";
+// @ts-ignore
+import "@fontsource/koulen";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 

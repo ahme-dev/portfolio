@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/imbue':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/koulen':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@tabler/icons-solidjs':
         specifier: ^3.30.0
         version: 3.31.0(solid-js@1.9.5)
@@ -337,6 +343,12 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/imbue@5.2.5':
+    resolution: {integrity: sha512-1IDbn0ZSyK1b0qdnYEBRzO/c7IHHd4sL4wi/61EhN667U9i925SQfCRMNjSgPrY7zxKvju16AbeRuArFbkZ8hg==}
+
+  '@fontsource/koulen@5.2.5':
+    resolution: {integrity: sha512-cjwZgNv6X5GhJj1XFJAZJ79Z6yFk2yVZEgcOt3OfWILHs//JQ+DK4soCO8Dl6dFbGQ5eiprKitb7n+9Q7RK8Rw==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -1298,6 +1310,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.0':
     optional: true
+
+  '@fontsource-variable/imbue@5.2.5': {}
+
+  '@fontsource/koulen@5.2.5': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:

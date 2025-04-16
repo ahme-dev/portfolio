@@ -10,6 +10,8 @@
 		"fix": "biome check --write"
 	},
 	"dependencies": {
+		"@fontsource-variable/imbue": "^5.2.5",
+		"@fontsource/koulen": "^5.2.5",
 		"@tabler/icons-solidjs": "^3.30.0",
 		"@tailwindcss/vite": "^4.0.8",
 		"gsap": "^3.12.7",
